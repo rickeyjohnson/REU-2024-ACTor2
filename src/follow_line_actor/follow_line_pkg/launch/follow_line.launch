@@ -1,0 +1,14 @@
+<launch>
+    <include file="$(find simple_camera_publisher)/launch/example.launch" >
+
+   </include>
+
+    <!-- launch the node -->
+    <!-- <node name="cam_pub" pkg="simple_camera_publisher" type="cam_pub" respawn="true" respawn_delay="10" output="screen">
+        <param name="source" type="string" value="$(arg source)" />
+    </node> -->
+
+    <node name="follow_line" pkg="follow_line_pkg" type="follow_line.py" required="true" output="screen">
+        <param name="imgtopic_name" type="str" value="camera/image_raw" />   
+    </node>
+</launch>
