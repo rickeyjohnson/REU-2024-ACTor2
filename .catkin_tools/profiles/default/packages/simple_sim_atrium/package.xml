@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>simple_sim_atrium</name>
+  <version>0.0.1</version>
+  <description>The simple_sim_igvc package</description>
+
+  <maintainer email="npaul@ltu.edu">Nicholas Paul</maintainer>
+  <maintainer email="gderose2@gmail.com">Joe DeRose</maintainer>
+
+  <license>MIT</license>
+
+  <url type="website">https://github.com/ltu-ros/simple_sim_igvc</url>
+
+  <buildtool_depend>catkin</buildtool_depend>
+</package>

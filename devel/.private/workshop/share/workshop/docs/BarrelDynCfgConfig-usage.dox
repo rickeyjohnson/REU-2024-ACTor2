@@ -1,0 +1,18 @@
+\subsubsection usage Usage
+\verbatim
+<node name="workshop" pkg="workshop" type="workshop">
+  <param name="debug" type="bool" value="False" />
+  <param name="detect_threshold" type="double" value="1.0" />
+  <param name="window_width" type="double" value="0.5" />
+  <param name="window_height" type="double" value="0.5" />
+  <param name="x_pos" type="double" value="0.5" />
+  <param name="y_pos" type="double" value="0.5" />
+  <param name="hue_low" type="int" value="0" />
+  <param name="hue_high" type="int" value="179" />
+  <param name="sat_low" type="int" value="0" />
+  <param name="sat_high" type="int" value="255" />
+  <param name="val_low" type="int" value="0" />
+  <param name="val_high" type="int" value="255" />
+</node>
+\endverbatim
+

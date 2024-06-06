@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/reu-actor/actor_ws/devel/.private/simple_camera_publisher/setup.sh

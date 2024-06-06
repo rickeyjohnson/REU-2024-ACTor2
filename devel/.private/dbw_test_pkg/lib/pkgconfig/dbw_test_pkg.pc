@@ -1,0 +1,8 @@
+prefix=/home/reu-actor/actor_ws/devel/.private/dbw_test_pkg
+
+Name: dbw_test_pkg
+Description: Description of dbw_test_pkg
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

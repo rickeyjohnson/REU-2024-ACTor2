@@ -1,0 +1,4 @@
+[35m[1mScanning dependencies of target cam_pub[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/cam_pub.dir/src/cam_pub.cpp.o[0m
+[100%] [32m[1mLinking CXX executable /home/reu-actor/actor_ws/devel/.private/simple_camera_publisher/lib/simple_camera_publisher/cam_pub[0m
+[100%] Built target cam_pub

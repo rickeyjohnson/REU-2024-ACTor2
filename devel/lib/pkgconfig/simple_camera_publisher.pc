@@ -1,0 +1,1 @@
+/home/reu-actor/actor_ws/devel/.private/simple_camera_publisher/lib/pkgconfig/simple_camera_publisher.pc

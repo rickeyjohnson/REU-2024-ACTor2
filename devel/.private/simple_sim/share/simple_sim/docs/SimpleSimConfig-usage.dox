@@ -1,0 +1,17 @@
+\subsubsection usage Usage
+\verbatim
+<node name="simple_sim" pkg="simple_sim" type="simple_sim">
+  <param name="camera_z" type="double" value="0.5" />
+  <param name="camera_phi" type="double" value="60.0" />
+  <param name="camera_f" type="double" value="70.0" />
+  <param name="camera_border" type="bool" value="False" />
+  <param name="lidar_active" type="bool" value="True" />
+  <param name="lidar_max_dst" type="double" value="3.5" />
+  <param name="lidar_mkr_size" type="int" value="7" />
+  <param name="exterior_walls" type="bool" value="False" />
+  <param name="obstructions" type="bool" value="True" />
+  <param name="collision_type" type="int" value="0" />
+  <param name="initialize" type="bool" value="False" />
+</node>
+\endverbatim
+

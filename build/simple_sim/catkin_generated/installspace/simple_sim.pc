@@ -1,0 +1,8 @@
+prefix=/home/reu-actor/actor_ws/install
+
+Name: simple_sim
+Description: Description of simple_sim
+Version: 0.0.0
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib -lsimple_sim
+Requires: cv_bridge dynamic_reconfigure geometry_msgs image_transport roscpp sensor_msgs std_msgs tf

@@ -1,0 +1,13 @@
+\subsubsection parameters ROS parameters
+
+Reads and maintains the following parameters on the ROS server
+
+- \b "~debug" : \b [bool] Debug min: False, default: False, max: True
+- \b "~dist_thres" : \b [double] Detect Threshold min: 0.0, default: 1.0, max: 10.0
+- \b "~x_min" : \b [double] X Min min: 0.0, default: 1.0, max: 5.0
+- \b "~x_max" : \b [double] X Max min: 0.0, default: 5.0, max: 10.0
+- \b "~y_min" : \b [double] Y Min min: -5.0, default: -1.0, max: 0.0
+- \b "~y_max" : \b [double] Y Max min: 0.0, default: 1.0, max: 5.0
+- \b "~z_min" : \b [double] Z Min min: -5.0, default: -1.0, max: 0.0
+- \b "~z_max" : \b [double] Z Max min: 0.0, default: 1.0, max: 5.0
+

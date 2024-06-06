@@ -1,0 +1,16 @@
+\subsubsection usage Usage
+\verbatim
+<node name="workshop" pkg="workshop" type="workshop">
+  <param name="speed" type="double" value="0.0" />
+  <param name="enable" type="bool" value="False" />
+  <param name="crosswalk" type="bool" value="False" />
+  <param name="barrel_vision" type="bool" value="False" />
+  <param name="barrel_lidar" type="bool" value="False" />
+  <param name="line_follow" type="bool" value="False" />
+  <param name="lane_center" type="bool" value="False" />
+  <param name="barrel_x" type="double" value="0.0" />
+  <param name="barrel_y" type="double" value="0.0" />
+  <param name="barrel_rad" type="double" value="0.0" />
+</node>
+\endverbatim
+

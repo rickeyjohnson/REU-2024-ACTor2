@@ -1,0 +1,8 @@
+prefix=/home/reu-actor/actor_ws/devel/.private/simple_camera_publisher
+
+Name: simple_camera_publisher
+Description: Description of simple_camera_publisher
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: roscpp
