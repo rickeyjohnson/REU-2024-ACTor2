@@ -7,7 +7,7 @@ from sensor_msgs.msg import Image
 from std_msgs.msg import Empty
 from cv_bridge import CvBridge, CvBridgeError
 from dynamic_reconfigure.server import Server
-from follow_lane_pkg.cfg import FollowLaneConfig   # from package_name.cfg import cfgNameConfig
+from follow_line_pkg.cfg import FollowLineConfig   # from package_name.cfg import cfgNameConfig
 from geometry_msgs.msg import Twist
 import numpy as np
 
@@ -37,7 +37,8 @@ def image_callback(ros_image):
 
     # drawing contours along the edges of the line
     cv_image = cv2.resize(cv_image, None, fx=0.7, fy=0.7, interpolation=cv2.INTER_AREA)
-    (rows, cols, _) = cv_image.shape                                # get height and width of image
+    (rows, cols, _) = cv_image.shape 
+    cv_image = cv_image[rows//2:, :int(cols * 3 / 4)]                               # get height and width of image
     gray_image = cv2.cvtColor(cv_image, cv2.COLOR_BGR2GRAY)             # convert image to grayscale
     ret, bw_image = cv2.threshold(gray_image,                           # input image
                                   thresh,                               # threshold
@@ -81,10 +82,9 @@ def drive_follow_line(cx, cy):
     mid = cols / 2
 
     if speed > 1.5:
-        p  = 0.7 * (mid - cx) / mid                  # best formula for angular velocity
+        p  = abs(0.8 * (mid - cx) / mid)                  # best formula for angular velocity
     else:
-       p  = 0.3 * (mid - cx) / mid                  # best formula for angular velocity
-
+        p  = abs(0.7 * (mid - cx) / mid)                  # best formula for angular velocity
     if drive == True:
         vel_msg.linear.x = speed
         if cx > mid + tolerance:          # if the center of the line is to the right of the center of the image
@@ -96,6 +96,7 @@ def drive_follow_line(cx, cy):
         else:
             vel_msg.angular.z = 0
             velocity_pub.publish(vel_msg)
+        rospy.loginfo(vel_msg.angular.z)
     else:
         vel_msg.linear.x = 0
         vel_msg.angular.z = 0
@@ -113,7 +114,7 @@ if __name__ == '__main__':
   rospy.Subscriber(imgtopic, Image, image_callback) # subscribe to image (so that image_callback can be called every time an image is published)
   enable_pub = rospy.Publisher('/vehicle/enable', Empty, queue_size=1)      # publish to enable (to enable the robot)
   velocity_pub = rospy.Publisher('/vehicle/cmd_vel', Twist, queue_size=1)   # publish to cmd_vel (to move the robot)
-  srv = Server(FollowLaneConfig, dyn_rcfg_cb) # create dynamic reconfigure server that calls dyn_rcfg_cb function every time a parameter is changed
+  srv = Server(FollowLineConfig, dyn_rcfg_cb) # create dynamic reconfigure server that calls dyn_rcfg_cb function every time a parameter is changed
 
   try:
     rospy.spin()

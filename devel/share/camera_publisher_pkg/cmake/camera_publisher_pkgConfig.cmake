@@ -1,0 +1,1 @@
+/home/reu-actor/actor_ws/devel/.private/camera_publisher_pkg/share/camera_publisher_pkg/cmake/camera_publisher_pkgConfig.cmake
