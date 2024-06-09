@@ -80,11 +80,19 @@ def image_callback(ros_image):
 def drive_follow_line(cx, cy):
     tolerance = 10
     mid = cols / 2
-
+    linear_threshold = 50
 
     p  = abs(0.8 * (mid - cx) / mid)                  # best formula for angular velocity
     if drive == True:
-        vel_msg.linear.x = speed
+        if abs(cx - mid) < linear_threshold:
+            vel_msg.linear.x = 2.0
+            velocity_pub.publish(vel_msg)
+        elif abs(cx - mid) < linear_threshold:
+            vel_msg.linear.x = 1.5
+            velocity_pub.publish(vel_msg) 
+        else:
+            vel_msg.linear.x = 1.2
+        velocity_pub.publish(vel_msg)
         if cx > mid + tolerance:          # if the center of the line is to the right of the center of the image
             vel_msg.angular.z = -p
             velocity_pub.publish(vel_msg)
