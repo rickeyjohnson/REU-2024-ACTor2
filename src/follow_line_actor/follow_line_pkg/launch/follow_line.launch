@@ -1,7 +1,6 @@
 <launch>
-    <include file="$(find simple_camera_publisher)/launch/example.launch" >
-
-   </include>
+    <include file="$(find simple_camera_publisher)/launch/example.launch" ></include>
+   <include file="$(find dbs_polaris_can)/launch/dbw.launch" ></include>
     <arg name="show_dynamic_reconfigure" default="true"/>
     <!-- launch the node -->
     <!-- <node name="cam_pub" pkg="simple_camera_publisher" type="cam_pub" respawn="true" respawn_delay="10" output="screen">
