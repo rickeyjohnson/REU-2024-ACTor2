@@ -92,7 +92,7 @@ def drive_follow_line(cx, cy):
             velocity_pub.publish(vel_msg) 
         else:
             vel_msg.linear.x = 1.2
-        velocity_pub.publish(vel_msg)
+            velocity_pub.publish(vel_msg)
         if cx > mid + tolerance:          # if the center of the line is to the right of the center of the image
             vel_msg.angular.z = -p
             velocity_pub.publish(vel_msg)
