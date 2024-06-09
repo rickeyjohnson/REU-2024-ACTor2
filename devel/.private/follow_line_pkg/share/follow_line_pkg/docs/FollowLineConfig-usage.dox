@@ -1,0 +1,9 @@
+\subsubsection usage Usage
+\verbatim
+<node name="follow_line" pkg="follow_line_pkg" type="follow_line">
+  <param name="thresh" type="int" value="150" />
+  <param name="speed" type="double" value="0.0" />
+  <param name="enable_drive" type="bool" value="False" />
+</node>
+\endverbatim
+

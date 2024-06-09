@@ -1,0 +1,8 @@
+prefix=/home/reu-actor/actor_ws/devel/.private/dyn_rcfg0_pkg
+
+Name: dyn_rcfg0_pkg
+Description: Description of dyn_rcfg0_pkg
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 
