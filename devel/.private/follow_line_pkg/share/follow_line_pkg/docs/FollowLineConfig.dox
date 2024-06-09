@@ -1,0 +1,8 @@
+\subsubsection parameters ROS parameters
+
+Reads and maintains the following parameters on the ROS server
+
+- \b "~thresh" : \b [int] Thresh Value min: 0, default: 150, max: 255
+- \b "~speed" : \b [double] Speed Value min: 0.1, default: 0.0, max: 4.0
+- \b "~enable_drive" : \b [bool] Enable min: False, default: False, max: True
+
