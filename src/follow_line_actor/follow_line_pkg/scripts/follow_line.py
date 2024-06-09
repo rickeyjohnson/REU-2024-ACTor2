@@ -81,10 +81,8 @@ def drive_follow_line(cx, cy):
     tolerance = 10
     mid = cols / 2
 
-    if speed > 1.5:
-        p  = abs(0.8 * (mid - cx) / mid)                  # best formula for angular velocity
-    else:
-        p  = abs(0.7 * (mid - cx) / mid)                  # best formula for angular velocity
+
+    p  = abs(0.8 * (mid - cx) / mid)                  # best formula for angular velocity
     if drive == True:
         vel_msg.linear.x = speed
         if cx > mid + tolerance:          # if the center of the line is to the right of the center of the image
