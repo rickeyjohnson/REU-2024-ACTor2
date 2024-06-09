@@ -89,20 +89,18 @@ def drive_follow_line(cx, cy):
             vel_msg.linear.x = 1.5 
         else:
             vel_msg.linear.x = 1.0
-        velocity_pub.publish(vel_msg)
 
         # angular speed
         tolerance = 10
         p  = abs(0.8 * (mid - cx) / mid)                  # best formula for angular velocity
         if cx > mid + tolerance:          # if the center of the line is to the right of the center of the image
             vel_msg.angular.z = -p
-            velocity_pub.publish(vel_msg)
         elif cx < mid - tolerance:        # if the center of the line is to the left of the center of the image
             vel_msg.angular.z = p
-            velocity_pub.publish(vel_msg)
         else:
             vel_msg.angular.z = 0
-            velocity_pub.publish(vel_msg)
+        # publish changes
+        velocity_pub.publish(vel_msg)
         rospy.loginfo(vel_msg.angular.z)
     else:
         vel_msg.linear.x = 0
