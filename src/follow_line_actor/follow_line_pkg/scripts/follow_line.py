@@ -120,20 +120,16 @@ class FollowLine:
 
         # draw center dot in middle of the line of the largest contour
         try:
-            cx, cy = int(M["m10"] / M["m00"]), int(
-                M["m01"] / M["m00"]
-            )  # find center of contour
-            cv2.circle(
-                cv_image, (cx, cy), 10, (0, 0, 0), -1
-            )  # draw center dot at center of countour (cx, cy)
-            self.drive_follow_line(cx, cy)
+            cx, cy = int(M["m10"] / M["m00"]), int(M["m01"] / M["m00"])
+            cv2.circle(cv_image, (cx, cy), 10, (0, 0, 0), -1)
+            self.drive_follow_line(cx)
         except ZeroDivisionError:
             pass
 
         cv2.imshow("Contours along white line", cv_image)  # show image
         cv2.waitKey(3)  # wait for 3ms to show image
 
-    def drive_follow_line(self, cx, cy):
+    def drive_follow_line(self, cx):
         tolerance = 10
         mid = cols / 2
 
@@ -156,7 +152,6 @@ class FollowLine:
             else:
                 self.vel_msg.angular.z = 0
                 self.velocity_publisher.publish(self.vel_msg)
-            rospy.loginfo(self.vel_msg.angular.z)
         else:
             self.vel_msg.linear.x = 0
             self.vel_msg.angular.z = 0
