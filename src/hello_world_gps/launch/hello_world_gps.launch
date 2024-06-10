@@ -1,0 +1,36 @@
+<launch>
+<!-- J Dombecki,  D Butani -->
+   
+   <!-- GPS system -->
+      <!-- ACTor1 -->
+      <!--
+      <include file="$(find piksi_multi_cpp)/launch/rover.launch">
+          <arg name="ns" value="reference" />
+          <arg name="device_ids" value="tcp://192.168.0.222:55555" />
+      </include>
+      
+      <include file="$(find piksi_multi_cpp)/launch/rover.launch">
+          <arg name="ns" value="attitude" />
+          <arg name="device_ids" value="tcp://192.168.0.223:55555" />
+      </include>
+      -->
+
+      <!-- ACTor2 -->
+      <!--
+      <include file="$(find piksi_multi_cpp)/launch/rover.launch">
+          <arg name="ns" value="reference" />
+          <arg name="device_ids" value="tcp://192.168.60.30:55555" />
+      </include>
+      
+      <include file="$(find piksi_multi_cpp)/launch/rover.launch">
+          <arg name="ns" value="attitude" />
+          <arg name="device_ids" value="tcp://192.168.60.31:55555" />
+      </include>
+      -->
+
+   <!-- Launch program node -->
+    <node pkg="hello_gps_package" type="hello_world_gps.py" name="hello_gps_node">  
+        <param name="gps_position" value="/reference/piksi/position_receiver_0/sbp/pos_llh"/>
+        <param name="gps_heading" value="/attitude/piksi/attitude_receiver_0/sbp/baseline_heading"/>
+    </node>
+</launch>
