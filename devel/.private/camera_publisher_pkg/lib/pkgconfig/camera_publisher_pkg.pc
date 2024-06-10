@@ -1,8 +1,0 @@
-prefix=/home/reu-actor/actor_ws/devel/.private/camera_publisher_pkg
-
-Name: camera_publisher_pkg
-Description: Description of camera_publisher_pkg
-Version: 0.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 

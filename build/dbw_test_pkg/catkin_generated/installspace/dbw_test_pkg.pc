@@ -1,8 +1,0 @@
-prefix=/home/reu-actor/actor_ws/install
-
-Name: dbw_test_pkg
-Description: Description of dbw_test_pkg
-Version: 0.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 

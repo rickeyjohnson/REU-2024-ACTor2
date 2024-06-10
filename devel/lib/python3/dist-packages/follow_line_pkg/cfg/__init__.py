@@ -1,1 +1,0 @@
-/home/reu-actor/actor_ws/devel/.private/follow_line_pkg/lib/python3/dist-packages/follow_line_pkg/cfg/__init__.py

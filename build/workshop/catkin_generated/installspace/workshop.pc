@@ -1,8 +1,0 @@
-prefix=/home/reu-actor/actor_ws/install
-
-Name: workshop
-Description: Description of workshop
-Version: 0.0.0
-Cflags: -I${prefix}/include
-Libs: -L${prefix}/lib 
-Requires: 

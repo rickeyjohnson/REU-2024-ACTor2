@@ -1,1 +1,0 @@
-/home/reu-actor/actor_ws/devel/.private/simple_sim_atrium/lib/pkgconfig/simple_sim_atrium.pc

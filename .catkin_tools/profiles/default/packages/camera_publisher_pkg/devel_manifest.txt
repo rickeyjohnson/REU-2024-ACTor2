@@ -1,5 +1,0 @@
-follow_line_actor/camera_publisher_pkg
-/home/reu-actor/actor_ws/devel/.private/camera_publisher_pkg/cmake.lock /home/reu-actor/actor_ws/devel/./cmake.lock
-/home/reu-actor/actor_ws/devel/.private/camera_publisher_pkg/lib/pkgconfig/camera_publisher_pkg.pc /home/reu-actor/actor_ws/devel/lib/pkgconfig/camera_publisher_pkg.pc
-/home/reu-actor/actor_ws/devel/.private/camera_publisher_pkg/share/camera_publisher_pkg/cmake/camera_publisher_pkgConfig.cmake /home/reu-actor/actor_ws/devel/share/camera_publisher_pkg/cmake/camera_publisher_pkgConfig.cmake
-/home/reu-actor/actor_ws/devel/.private/camera_publisher_pkg/share/camera_publisher_pkg/cmake/camera_publisher_pkgConfig-version.cmake /home/reu-actor/actor_ws/devel/share/camera_publisher_pkg/cmake/camera_publisher_pkgConfig-version.cmake
