@@ -16,7 +16,6 @@
       -->
 
       <!-- ACTor2 -->
-      <!--
       <include file="$(find piksi_multi_cpp)/launch/rover.launch">
           <arg name="ns" value="reference" />
           <arg name="device_ids" value="tcp://192.168.60.30:55555" />
@@ -26,7 +25,6 @@
           <arg name="ns" value="attitude" />
           <arg name="device_ids" value="tcp://192.168.60.31:55555" />
       </include>
-      -->
 
    <!-- Launch program node -->
     <node pkg="hello_gps_package" type="hello_world_gps.py" name="hello_gps_node">  
