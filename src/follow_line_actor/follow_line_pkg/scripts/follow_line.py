@@ -26,6 +26,10 @@ class FollowLine:
     empty_msg: Empty
     bridge: CvBridge
 
+    thresh: int
+    speed: float
+    drive: bool
+
     def __init__(self):
         """
         Initializes a line-following ROS node.
@@ -34,15 +38,11 @@ class FollowLine:
         imgtopic = rospy.get_param("~imgtopic_name")
 
         self.image_subscriber = rospy.Subscriber(imgtopic, Image, self.image_callback)
-        self.reset_publisher = rospy.Publisher(
-            "/vehicle/enable", Empty, queue_size=1
-        )  # publish to enable (to enable the robot)
+        self.reset_publisher = rospy.Publisher("/vehicle/enable", Empty, queue_size=1)
         self.velocity_publisher = rospy.Publisher(
             "/vehicle/cmd_vel", Twist, queue_size=1
-        )  # publish to cmd_vel (to move the robot)
-        self.reconf_srv = Server(
-            FollowLineConfig, self.dyn_rcfg_cb
-        )  # create dynamic reconfigure server that calls dyn_rcfg_cb function every time a parameter is changed
+        )
+        self.reconf_srv = Server(FollowLineConfig, self.dyn_rcfg_cb)
 
         self.vel_msg = Twist()
         self.empty_msg = Empty()
@@ -55,10 +55,9 @@ class FollowLine:
 
     # dynamic reconfigure callback function that updates the global variables: trhesh, speed, drive
     def dyn_rcfg_cb(self, config, level):
-        global thresh, speed, drive
-        thresh = config.thresh
-        speed = config.speed
-        drive = config.enable_drive
+        self.thresh = config.thresh
+        self.speed = config.speed
+        self.drive = config.enable_drive
         return config  # must return config
 
     # image callback function
