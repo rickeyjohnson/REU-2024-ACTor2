@@ -1,1 +1,0 @@
-/home/reu-actor/actor_ws/devel/.private/camera_publisher_pkg/lib/pkgconfig/camera_publisher_pkg.pc

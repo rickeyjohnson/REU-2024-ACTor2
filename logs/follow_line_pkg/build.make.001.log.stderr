@@ -1,7 +1,0 @@
-Traceback (most recent call last):
-  File "/home/reu-actor/actor_ws/src/follow_line_actor/follow_line_pkg/cfg/FollowLine.cfg", line 12, in <module>
-    exot(gen.generate(PACKAGE, "follow_line", "FollowLane"))
-NameError: name 'exot' is not defined
-make[2]: *** [CMakeFiles/follow_line_pkg_gencfg.dir/build.make:64: /home/reu-actor/actor_ws/devel/.private/follow_line_pkg/include/follow_line_pkg/FollowLineConfig.h] Error 1
-make[1]: *** [CMakeFiles/Makefile2:171: CMakeFiles/follow_line_pkg_gencfg.dir/all] Error 2
-make: *** [Makefile:141: all] Error 2

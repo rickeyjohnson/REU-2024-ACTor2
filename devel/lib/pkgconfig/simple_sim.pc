@@ -1,1 +1,0 @@
-/home/reu-actor/actor_ws/devel/.private/simple_sim/lib/pkgconfig/simple_sim.pc

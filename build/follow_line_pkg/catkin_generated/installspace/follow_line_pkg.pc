@@ -1,8 +1,0 @@
-prefix=/home/reu-actor/actor_ws/install
-
-Name: follow_line_pkg
-Description: Description of follow_line_pkg
-Version: 0.0.0
-Cflags: -I${prefix}/include
-Libs: -L${prefix}/lib 
-Requires: 

@@ -1,5 +1,0 @@
-PythonWorkshop/simple_sim_atrium
-/home/reu-actor/actor_ws/devel/.private/simple_sim_atrium/cmake.lock /home/reu-actor/actor_ws/devel/./cmake.lock
-/home/reu-actor/actor_ws/devel/.private/simple_sim_atrium/lib/pkgconfig/simple_sim_atrium.pc /home/reu-actor/actor_ws/devel/lib/pkgconfig/simple_sim_atrium.pc
-/home/reu-actor/actor_ws/devel/.private/simple_sim_atrium/share/simple_sim_atrium/cmake/simple_sim_atriumConfig-version.cmake /home/reu-actor/actor_ws/devel/share/simple_sim_atrium/cmake/simple_sim_atriumConfig-version.cmake
-/home/reu-actor/actor_ws/devel/.private/simple_sim_atrium/share/simple_sim_atrium/cmake/simple_sim_atriumConfig.cmake /home/reu-actor/actor_ws/devel/share/simple_sim_atrium/cmake/simple_sim_atriumConfig.cmake
