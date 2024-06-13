@@ -86,7 +86,7 @@ class FollowLine:
         )  # convert image to grayscale
         bw_image = cv2.threshold(
             gray_image,  # input image
-            thresh,  # threshold
+            self.thresh,  # threshold
             255,  # max value
             cv2.THRESH_BINARY,
         )[1]
@@ -132,12 +132,12 @@ class FollowLine:
         tolerance = 10
         mid = cols / 2
 
-        if speed > 1.5:
+        if self.speed > 1.5:
             p = abs(0.8 * (mid - cx) / mid)  # best formula for angular velocity
         else:
             p = abs(0.7 * (mid - cx) / mid)  # best formula for angular velocity
-        if drive == True:
-            self.vel_msg.linear.x = speed
+        if self.drive == True:
+            self.vel_msg.linear.x = self.speed
             if (
                 cx > mid + tolerance
             ):  # if the center of the line is to the right of the center of the image
