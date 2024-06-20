@@ -38,7 +38,7 @@ def image_callback(ros_image):
     # drawing contours along the edges of the line
     cv_image = cv2.resize(cv_image, None, fx=1.0, fy=1.0, interpolation=cv2.INTER_AREA)
     (rows, cols, _) = cv_image.shape 
-    cv_image = cv_image[rows//2:, :int(cols * 3 / 5)]                               # get height and width of image
+    cv_image = cv_image[rows//2:, int(cols * 1 / 7):]                               # get height and width of image
     gray_image = cv2.cvtColor(cv_image, cv2.COLOR_BGR2GRAY)             # convert image to grayscale
     ret, bw_image = cv2.threshold(gray_image,                           # input image
                                   thresh,                               # threshold
@@ -68,7 +68,7 @@ def image_callback(ros_image):
 
     # draw center dot in middle of the line of the largest contour    
     try:
-        cx, cy = int(M['m10']/M['m00']) + 190, int(M['m01']/M['m00'])         # find center of contour
+        cx, cy = int(M['m10']/M['m00']) - 190, int(M['m01']/M['m00'])         # find center of contour
         cv2.circle(cv_image, (cx, cy), 10, (0,0,0), -1)                 # draw center dot at center of countour (cx, cy)
         drive_follow_line(cx, cy)
     except ZeroDivisionError:

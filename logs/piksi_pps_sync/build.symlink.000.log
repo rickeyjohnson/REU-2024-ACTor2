@@ -1,0 +1,8 @@
+Symlinking /home/reu-actor/actor_ws/devel/lib/pkgconfig/piksi_pps_sync.pc
+Symlinking /home/reu-actor/actor_ws/devel/lib/python3/dist-packages/piksi_pps_sync/__init__.py
+Symlinking /home/reu-actor/actor_ws/devel/lib/piksi_pps_sync/cmake.lock
+Symlinking /home/reu-actor/actor_ws/devel/lib/piksi_pps_sync/evaluate_pps
+Symlinking /home/reu-actor/actor_ws/devel/bin/cmake.lock
+Symlinking /home/reu-actor/actor_ws/devel/bin/evaluate_pps
+Symlinking /home/reu-actor/actor_ws/devel/share/piksi_pps_sync/cmake/piksi_pps_syncConfig-version.cmake
+Symlinking /home/reu-actor/actor_ws/devel/share/piksi_pps_sync/cmake/piksi_pps_syncConfig.cmake
