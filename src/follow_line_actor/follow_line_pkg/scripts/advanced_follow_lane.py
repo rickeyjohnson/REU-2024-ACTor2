@@ -15,8 +15,8 @@ from sklearn.cluster import DBSCAN
 # global variables
 vel_msg = Twist()
 bridge = CvBridge()
-speed = 0
-drive = False
+# speed = 0
+# drive = False
 velocity_pub = None
 empty_msg = Empty()
 
@@ -38,7 +38,7 @@ def compute_lines(rows, cols, image):
 
     # mask white pixels
     gray = cv.cvtColor(image, cv.COLOR_BGR2GRAY)
-    _, thresh = cv.threshold(gray, 190, 255, cv.THRESH_BINARY)
+    _, thresh = cv.threshold(gray, 210, 255, cv.THRESH_BINARY)
 
     # canny filtering to get edges
     edges = cv.Canny(thresh, 50, 150, 3)
@@ -79,7 +79,6 @@ def compute_lines(rows, cols, image):
     # downsample the points uniformly for clustering
     downsample_factor = 10
     points = points[::downsample_factor]
-    print(len(points))
 
     # perform density based clustering
     dbscan = DBSCAN(eps=140, min_samples=3)
@@ -142,8 +141,13 @@ def image_callback(ros_image):
 
     # remove top of image
     rows1, cols1, _ = cv_image.shape
-    cv_image = cv_image[rows1 // 2:,cols1//5:]
+    cv_image = cv_image[rows1 // 2:,cols1//6:]
     rows, cols, _ = cv_image.shape
+
+    mymask = np.zeros((rows, cols), dtype="uint8")
+    myROI = [(cols // 2, 0), (0,(rows // 4)),(0,rows),(cols, rows), (cols, (rows //4)), (cols, 0)]
+    cv.fillPoly(mymask, [np.array(myROI)], 255)
+    cv_image = cv.bitwise_and(cv_image, cv_image, mask = mymask)
 
     image = cv_image.copy()
 
@@ -153,16 +157,40 @@ def image_callback(ros_image):
     if cx:
         mid = cols / 2
         if drive:
-            vel_msg.linear.x = 1.5
+        #     vel_msg.linear.x = 1.5
+        # else:
+        #     vel_msg.linear.x = 0
+
+            final_speed = speed - 1.75 * (abs((cx - mid) / (cols // 2)) * speed)
+
+            # linear_threshold1 = 50
+            # linear_threshold2 = 80
+            # if abs(cx - mid) < linear_threshold1:
+            #     vel_msg.linear.x = 2.0
+            # elif abs(cx - mid) < linear_threshold2:
+            #     vel_msg.linear.x = 1.5 
+            # else:
+            #     vel_msg.linear.x = 1.0
+            vel_msg.linear.x = final_speed
+
+        # angular_threshold = 10
+        # if mid < cx - angular_threshold:
+        #     vel_msg.angular.z = -abs(1.2 * (mid - cx) / mid)
+        # elif mid > cx + angular_threshold:
+        #     vel_msg.angular.z = abs(1.2 * (mid - cx) / mid)
+        # else:
+        #     vel_msg.angular.z = 0
+
+            tolerance = 10
+            p  = abs(0.8 * (mid - cx) / mid)                  # best formula for angular velocity
+            if cx > mid + tolerance:          # if the center of the line is to the right of the center of the image
+                vel_msg.angular.z = -p
+            elif cx < mid - tolerance:        # if the center of the line is to the left of the center of the image
+                vel_msg.angular.z = p
+            else:
+                vel_msg.angular.z = 0
         else:
             vel_msg.linear.x = 0
-
-        angular_threshold = 20
-        if mid < cx - angular_threshold:
-            vel_msg.angular.z = -abs(1.2 * (mid - cx) / mid)
-        elif mid > cx + angular_threshold:
-            vel_msg.angular.z = abs(1.2 * (mid - cx) / mid)
-        else:
             vel_msg.angular.z = 0
 
     # publish changes
