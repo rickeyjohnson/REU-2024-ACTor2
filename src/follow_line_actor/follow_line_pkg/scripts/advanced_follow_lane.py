@@ -32,24 +32,19 @@ def dyn_rcfg_cb(config, level):
 # compute lines and follow lane
 def compute_lines(rows, cols, image):
 
-    # remove top of image
-    image = image[rows // 2:, cols // 5:]
 
     # add median blur to emphasize white lines 
     image = cv.medianBlur(image, 5)
 
-    # get image shape
-    rows, cols, _ = image.shape
-
     # mask white pixels
     gray = cv.cvtColor(image, cv.COLOR_BGR2GRAY)
-    _, thresh = cv.threshold(gray, 170, 255, cv.THRESH_BINARY)
+    _, thresh = cv.threshold(gray, 190, 255, cv.THRESH_BINARY)
 
     # canny filtering to get edges
     edges = cv.Canny(thresh, 50, 150, 3)
 
     # get list of lines
-    lines = cv.HoughLinesP(edges, 1, np.pi / 180, threshold=20, minLineLength=20, maxLineGap=10)
+    lines = cv.HoughLinesP(edges, 3, np.pi / 180, threshold=20, minLineLength=10, maxLineGap=10)
     
     # empty image to draw filtered lines
     line_image = np.zeros_like(image)
@@ -66,12 +61,12 @@ def compute_lines(rows, cols, image):
             else:
                 slope = dy / dx
 
-            if abs(slope) >= 0.6:
+            if abs(slope) >= 0.4:
                 cv.line(line_image, (x1, y1), (x2, y2), (255, 255, 255), 2)
 
     # make lines thicker
-    element = cv.getStructuringElement(cv.MORPH_RECT, (5,5))
-    image = cv.dilate(line_image, element)
+    #element = cv.getStructuringElement(cv.MORPH_RECT, (5,5))
+    #line_image = cv.dilate(line_image, element)
     cv.imshow("canny", line_image)
 
     # get white points
@@ -82,11 +77,12 @@ def compute_lines(rows, cols, image):
         return image
 
     # downsample the points uniformly for clustering
-    downsample_factor = 50  
+    downsample_factor = 10
     points = points[::downsample_factor]
+    print(len(points))
 
     # perform density based clustering
-    dbscan = DBSCAN(eps=190, min_samples=3)
+    dbscan = DBSCAN(eps=140, min_samples=3)
     clusters = dbscan.fit_predict(points)
 
     # get the two largest clusters 
@@ -96,8 +92,8 @@ def compute_lines(rows, cols, image):
     colors = [(0, 255, 0), (0, 0, 255)]
     label_to_color = {label: colors[i] for i, label in enumerate(largest_labels)}
 
-    # skip if 2 clusters weren't found
     if len(unique_labels) < 2:
+        print("a")
         return None
     
     lane_centroids = []
@@ -120,13 +116,12 @@ def compute_lines(rows, cols, image):
         
         centroid_x = np.mean(lane_points[:, 1]) 
         lane_centroids.append(centroid_x)
-        mass.append(len(lane_points))
 
     # get cx from the average of the two clusters' centroids
     if len(lane_centroids) == 2:
         cx = int(np.mean(lane_centroids))
         cv.circle(image, (cols // 2, rows // 2), 5, (0, 0, 0), -1)
-        cv.arrowLine(image, (cols // 2, rows // 2), (cx, rows // 2), (255, 255, 255), 3)
+        cv.arrowedLine(image, (cols // 2, rows // 2), (cx, rows // 2), (255, 255, 255), 3)
     else:
         cx = cols // 2 
 
@@ -145,7 +140,11 @@ def image_callback(ros_image):
         rospy.logerr(f"CvBridge Error: {e}")
         return
 
+    # remove top of image
+    rows1, cols1, _ = cv_image.shape
+    cv_image = cv_image[rows1 // 2:,cols1//5:]
     rows, cols, _ = cv_image.shape
+
     image = cv_image.copy()
 
     # compute lines and obtain cx
@@ -154,7 +153,7 @@ def image_callback(ros_image):
     if cx:
         mid = cols / 2
         if drive:
-            vel_msg.linear.x = speed
+            vel_msg.linear.x = 1.5
         else:
             vel_msg.linear.x = 0
 
