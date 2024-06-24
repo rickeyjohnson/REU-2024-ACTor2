@@ -19,6 +19,8 @@ bridge = CvBridge()
 # drive = False
 velocity_pub = None
 empty_msg = Empty()
+crop1 = 0
+crop2 = 0
 
 
 # dynamic reconfigure
@@ -30,11 +32,16 @@ def dyn_rcfg_cb(config, level):
   return config # must return config
 
 # compute lines and follow lane
-def compute_lines(rows, cols, image):
+def compute_lines(rows, cols, image, crop1, crop2):
 
 
     # add median blur to emphasize white lines 
     image = cv.medianBlur(image, 5)
+    mymask = np.zeros((rows, cols), dtype="uint8") # specifying dtype is critical
+    myROI = [(cols // 2, 0), (0,crop1), (0, rows), (cols, rows), (cols, crop2), (cols //2, 0)]  # (x, y)
+    cv.fillPoly(mymask, [np.array(myROI)], 255) # 255-white color
+    # performing a bitwise_and with the image and the mask
+    image  = cv.bitwise_and(image, image, mask=mymask)
 
     # mask white pixels
     gray = cv.cvtColor(image, cv.COLOR_BGR2GRAY)
@@ -53,15 +60,38 @@ def compute_lines(rows, cols, image):
     if lines is not None:
         for line in lines:
 
+            # x1, y1, x2, y2 = line[0]
+            # dx = x2 - x1
+            # dy = y2 - y1
+            # if dx == 0: 
+            #     slope = float('inf')
+            # else:
+            #     slope = dy / dx
+
+            # if abs(slope) >= 0.4:
+            #     cv.line(line_image, (x1, y1), (x2, y2), (255, 255, 255), 2)
             x1, y1, x2, y2 = line[0]
-            dx = x2 - x1
-            dy = y2 - y1
-            if dx == 0: 
+            
+            # Calculate length of the line segment
+            length = np.sqrt((x2 - x1)**2 + (y2 - y1)**2)
+            
+            # Calculate slope of the line
+            if x2 - x1 == 0:
                 slope = float('inf')
             else:
-                slope = dy / dx
-
-            if abs(slope) >= 0.4:
+                slope = (y2 - y1) / (x2 - x1)
+            
+            # Extend the line if its length is shorter than 40 pixels and slope is >= 0.4 or <= -0.4
+            if length < 50 and abs(slope) >= 0.4:
+                # Extend the line by a factor of 1.5 times its original length
+                extend_factor = 2
+                x1_extended = int(x1 - (x2 - x1) * (extend_factor - 1))
+                y1_extended = int(y1 - (y2 - y1) * (extend_factor - 1))
+                x2_extended = int(x2 + (x2 - x1) * (extend_factor - 1))
+                y2_extended = int(y2 + (y2 - y1) * (extend_factor - 1))
+                
+                cv.line(line_image, (x1_extended, y1_extended), (x2_extended, y2_extended), (255, 255, 255), 2)
+            elif abs(slope) >= 0.4:
                 cv.line(line_image, (x1, y1), (x2, y2), (255, 255, 255), 2)
 
     # make lines thicker
@@ -77,7 +107,9 @@ def compute_lines(rows, cols, image):
         return image
 
     # downsample the points uniformly for clustering
-    downsample_factor = 10
+    # downsample_factor = 10
+    # points = points[::downsample_factor]
+    downsample_factor = int(len(points) / (0.01 * len(points)))
     points = points[::downsample_factor]
 
     # perform density based clustering
@@ -128,11 +160,12 @@ def compute_lines(rows, cols, image):
     cv.imshow("White Points", image)
     cv.waitKey(3)
 
-    return cx
+    
+    return cx, (cx - (cols // 2))
 
 
 def image_callback(ros_image):
-    global bridge, vel_msg, speed, drive, velocity_pub
+    global bridge, vel_msg, speed, drive, velocity_pub, crop1,crop2
     try:
         cv_image = bridge.imgmsg_to_cv2(ros_image, "bgr8")
     except CvBridgeError as e:
@@ -152,46 +185,29 @@ def image_callback(ros_image):
     image = cv_image.copy()
 
     # compute lines and obtain cx
-    cx = compute_lines(rows, cols, image)
+    cx, gap = compute_lines(rows, cols, image, crop1, crop2)
+    if gap < 0:
+        crop2 = -gap
+        crop1 = 0
+    else:
+        crop1 = gap
+        crop2 = 0
 
     if cx:
         mid = cols / 2
         if drive:
-        #     vel_msg.linear.x = 1.5
-        # else:
-        #     vel_msg.linear.x = 0
-
-            final_speed = speed - 1.75 * (abs((cx - mid) / (cols // 2)) * speed)
-
-            # linear_threshold1 = 50
-            # linear_threshold2 = 80
-            # if abs(cx - mid) < linear_threshold1:
-            #     vel_msg.linear.x = 2.0
-            # elif abs(cx - mid) < linear_threshold2:
-            #     vel_msg.linear.x = 1.5 
-            # else:
-            #     vel_msg.linear.x = 1.0
-            vel_msg.linear.x = final_speed
-
-        # angular_threshold = 10
-        # if mid < cx - angular_threshold:
-        #     vel_msg.angular.z = -abs(1.2 * (mid - cx) / mid)
-        # elif mid > cx + angular_threshold:
-        #     vel_msg.angular.z = abs(1.2 * (mid - cx) / mid)
-        # else:
-        #     vel_msg.angular.z = 0
-
-            tolerance = 10
-            p  = abs(0.8 * (mid - cx) / mid)                  # best formula for angular velocity
-            if cx > mid + tolerance:          # if the center of the line is to the right of the center of the image
-                vel_msg.angular.z = -p
-            elif cx < mid - tolerance:        # if the center of the line is to the left of the center of the image
-                vel_msg.angular.z = p
-            else:
-                vel_msg.angular.z = 0
+            vel_msg.linear.x = speed
         else:
             vel_msg.linear.x = 0
+
+        angular_threshold = 10
+        if mid < cx - angular_threshold:
+            vel_msg.angular.z = -abs(speed * (mid - cx) / mid)
+        elif mid > cx + angular_threshold:
+            vel_msg.angular.z = abs(speed * (mid - cx) / mid)
+        else:
             vel_msg.angular.z = 0
+    
 
     # publish changes
     velocity_pub.publish(vel_msg)
@@ -199,7 +215,7 @@ def image_callback(ros_image):
 
 # main method
 if __name__ == '__main__':
-  rospy.init_node('advanced_follow_lane', anonymous=True) # initialize node
+  rospy.init_node('advanced_follow_lane2', anonymous=True) # initialize node
   imgtopic = rospy.get_param("~imgtopic_name") # private name
   rospy.Subscriber(imgtopic, Image, image_callback) # subscribe to image (so that image_callback can be called every time an image is published)
   enable_pub = rospy.Publisher('/vehicle/enable', Empty, queue_size=1)      # publish to enable (to enable the robot)
