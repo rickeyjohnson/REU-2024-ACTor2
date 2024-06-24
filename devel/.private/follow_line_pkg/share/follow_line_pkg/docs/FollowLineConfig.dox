@@ -2,7 +2,13 @@
 
 Reads and maintains the following parameters on the ROS server
 
-- \b "~thresh" : \b [int] Thresh Value min: 0, default: 150, max: 255
+- \b "~thresh" : \b [int] Thresh Value min: 0, default: 220, max: 255
 - \b "~speed" : \b [double] Speed Value min: 0.1, default: 0.0, max: 4.0
 - \b "~enable_drive" : \b [bool] Enable min: False, default: False, max: True
+- \b "~lower_yellow" : \b [int] lower yellow Value min: 0, default: 0, max: 255
+- \b "~upper_yellow" : \b [int] Upper yellow Value min: 0, default: 24, max: 255
+- \b "~ls" : \b [int] lower sat Value min: 0, default: 27, max: 255
+- \b "~lv" : \b [int] lower value Value min: 0, default: 70, max: 255
+- \b "~us" : \b [int] Upper sat  Value min: 0, default: 255, max: 255
+- \b "~uv" : \b [int] Upper val Value min: 0, default: 255, max: 255
 

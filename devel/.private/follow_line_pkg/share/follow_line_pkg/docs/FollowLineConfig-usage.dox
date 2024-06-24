@@ -1,9 +1,15 @@
 \subsubsection usage Usage
 \verbatim
 <node name="follow_line" pkg="follow_line_pkg" type="follow_line">
-  <param name="thresh" type="int" value="150" />
+  <param name="thresh" type="int" value="220" />
   <param name="speed" type="double" value="0.0" />
   <param name="enable_drive" type="bool" value="False" />
+  <param name="lower_yellow" type="int" value="0" />
+  <param name="upper_yellow" type="int" value="24" />
+  <param name="ls" type="int" value="27" />
+  <param name="lv" type="int" value="70" />
+  <param name="us" type="int" value="255" />
+  <param name="uv" type="int" value="255" />
 </node>
 \endverbatim
 
