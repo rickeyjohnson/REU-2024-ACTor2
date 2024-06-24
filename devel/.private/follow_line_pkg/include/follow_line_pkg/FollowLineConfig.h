@@ -242,12 +242,24 @@ class DEFAULT
         if("thresh"==(*_i)->name){thresh = boost::any_cast<int>(val);}
         if("speed"==(*_i)->name){speed = boost::any_cast<double>(val);}
         if("enable_drive"==(*_i)->name){enable_drive = boost::any_cast<bool>(val);}
+        if("lower_yellow"==(*_i)->name){lower_yellow = boost::any_cast<int>(val);}
+        if("upper_yellow"==(*_i)->name){upper_yellow = boost::any_cast<int>(val);}
+        if("ls"==(*_i)->name){ls = boost::any_cast<int>(val);}
+        if("lv"==(*_i)->name){lv = boost::any_cast<int>(val);}
+        if("us"==(*_i)->name){us = boost::any_cast<int>(val);}
+        if("uv"==(*_i)->name){uv = boost::any_cast<int>(val);}
       }
     }
 
     int thresh;
 double speed;
 bool enable_drive;
+int lower_yellow;
+int upper_yellow;
+int ls;
+int lv;
+int us;
+int uv;
 
     bool state;
     std::string name;
@@ -263,6 +275,18 @@ bool enable_drive;
       double speed;
 //#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       bool enable_drive;
+//#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+      int lower_yellow;
+//#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+      int upper_yellow;
+//#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+      int ls;
+//#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+      int lv;
+//#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+      int us;
+//#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+      int uv;
 //#line 231 "/opt/ros/noetic/share/dynamic_reconfigure/cmake/../templates/ConfigType.h.template"
 
     bool __fromMessage__(dynamic_reconfigure::Config &msg)
@@ -406,7 +430,7 @@ FollowLineConfig::GroupDescription<FollowLineConfig::DEFAULT, FollowLineConfig> 
 //#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __max__.thresh = 255;
 //#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __default__.thresh = 150;
+      __default__.thresh = 220;
 //#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       Default.abstract_parameters.push_back(FollowLineConfig::AbstractParamDescriptionConstPtr(new FollowLineConfig::ParamDescription<int>("thresh", "int", 0, "Thresh Value", "", &FollowLineConfig::thresh)));
 //#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
@@ -431,6 +455,66 @@ FollowLineConfig::GroupDescription<FollowLineConfig::DEFAULT, FollowLineConfig> 
       Default.abstract_parameters.push_back(FollowLineConfig::AbstractParamDescriptionConstPtr(new FollowLineConfig::ParamDescription<bool>("enable_drive", "bool", 0, "Enable", "", &FollowLineConfig::enable_drive)));
 //#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __param_descriptions__.push_back(FollowLineConfig::AbstractParamDescriptionConstPtr(new FollowLineConfig::ParamDescription<bool>("enable_drive", "bool", 0, "Enable", "", &FollowLineConfig::enable_drive)));
+//#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+      __min__.lower_yellow = 0;
+//#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+      __max__.lower_yellow = 255;
+//#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+      __default__.lower_yellow = 0;
+//#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+      Default.abstract_parameters.push_back(FollowLineConfig::AbstractParamDescriptionConstPtr(new FollowLineConfig::ParamDescription<int>("lower_yellow", "int", 0, "lower yellow Value", "", &FollowLineConfig::lower_yellow)));
+//#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+      __param_descriptions__.push_back(FollowLineConfig::AbstractParamDescriptionConstPtr(new FollowLineConfig::ParamDescription<int>("lower_yellow", "int", 0, "lower yellow Value", "", &FollowLineConfig::lower_yellow)));
+//#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+      __min__.upper_yellow = 0;
+//#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+      __max__.upper_yellow = 255;
+//#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+      __default__.upper_yellow = 24;
+//#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+      Default.abstract_parameters.push_back(FollowLineConfig::AbstractParamDescriptionConstPtr(new FollowLineConfig::ParamDescription<int>("upper_yellow", "int", 0, "Upper yellow Value", "", &FollowLineConfig::upper_yellow)));
+//#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+      __param_descriptions__.push_back(FollowLineConfig::AbstractParamDescriptionConstPtr(new FollowLineConfig::ParamDescription<int>("upper_yellow", "int", 0, "Upper yellow Value", "", &FollowLineConfig::upper_yellow)));
+//#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+      __min__.ls = 0;
+//#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+      __max__.ls = 255;
+//#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+      __default__.ls = 27;
+//#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+      Default.abstract_parameters.push_back(FollowLineConfig::AbstractParamDescriptionConstPtr(new FollowLineConfig::ParamDescription<int>("ls", "int", 0, "lower sat Value", "", &FollowLineConfig::ls)));
+//#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+      __param_descriptions__.push_back(FollowLineConfig::AbstractParamDescriptionConstPtr(new FollowLineConfig::ParamDescription<int>("ls", "int", 0, "lower sat Value", "", &FollowLineConfig::ls)));
+//#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+      __min__.lv = 0;
+//#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+      __max__.lv = 255;
+//#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+      __default__.lv = 70;
+//#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+      Default.abstract_parameters.push_back(FollowLineConfig::AbstractParamDescriptionConstPtr(new FollowLineConfig::ParamDescription<int>("lv", "int", 0, "lower value Value", "", &FollowLineConfig::lv)));
+//#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+      __param_descriptions__.push_back(FollowLineConfig::AbstractParamDescriptionConstPtr(new FollowLineConfig::ParamDescription<int>("lv", "int", 0, "lower value Value", "", &FollowLineConfig::lv)));
+//#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+      __min__.us = 0;
+//#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+      __max__.us = 255;
+//#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+      __default__.us = 255;
+//#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+      Default.abstract_parameters.push_back(FollowLineConfig::AbstractParamDescriptionConstPtr(new FollowLineConfig::ParamDescription<int>("us", "int", 0, "Upper sat  Value", "", &FollowLineConfig::us)));
+//#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+      __param_descriptions__.push_back(FollowLineConfig::AbstractParamDescriptionConstPtr(new FollowLineConfig::ParamDescription<int>("us", "int", 0, "Upper sat  Value", "", &FollowLineConfig::us)));
+//#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+      __min__.uv = 0;
+//#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+      __max__.uv = 255;
+//#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+      __default__.uv = 255;
+//#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+      Default.abstract_parameters.push_back(FollowLineConfig::AbstractParamDescriptionConstPtr(new FollowLineConfig::ParamDescription<int>("uv", "int", 0, "Upper val Value", "", &FollowLineConfig::uv)));
+//#line 291 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
+      __param_descriptions__.push_back(FollowLineConfig::AbstractParamDescriptionConstPtr(new FollowLineConfig::ParamDescription<int>("uv", "int", 0, "Upper val Value", "", &FollowLineConfig::uv)));
 //#line 246 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       Default.convertParams();
 //#line 246 "/opt/ros/noetic/lib/python3/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
