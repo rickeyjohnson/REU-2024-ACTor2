@@ -1,0 +1,43 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/home/reu-actor/actor_ws/build/libserialport_catkin/CMakeFiles/libserialport"
+		},
+		{
+			"file" : "/home/reu-actor/actor_ws/build/libserialport_catkin/CMakeFiles/libserialport.rule"
+		},
+		{
+			"file" : "/home/reu-actor/actor_ws/build/libserialport_catkin/CMakeFiles/libserialport-complete.rule"
+		},
+		{
+			"file" : "/home/reu-actor/actor_ws/build/libserialport_catkin/libserialport-prefix/src/libserialport-stamp/libserialport-install.rule"
+		},
+		{
+			"file" : "/home/reu-actor/actor_ws/build/libserialport_catkin/libserialport-prefix/src/libserialport-stamp/libserialport-mkdir.rule"
+		},
+		{
+			"file" : "/home/reu-actor/actor_ws/build/libserialport_catkin/libserialport-prefix/src/libserialport-stamp/libserialport-download.rule"
+		},
+		{
+			"file" : "/home/reu-actor/actor_ws/build/libserialport_catkin/libserialport-prefix/src/libserialport-stamp/libserialport-update.rule"
+		},
+		{
+			"file" : "/home/reu-actor/actor_ws/build/libserialport_catkin/libserialport-prefix/src/libserialport-stamp/libserialport-patch.rule"
+		},
+		{
+			"file" : "/home/reu-actor/actor_ws/build/libserialport_catkin/libserialport-prefix/src/libserialport-stamp/libserialport-configure.rule"
+		},
+		{
+			"file" : "/home/reu-actor/actor_ws/build/libserialport_catkin/libserialport-prefix/src/libserialport-stamp/libserialport-build.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"libserialport"
+		],
+		"name" : "libserialport"
+	}
+}

@@ -1,0 +1,1 @@
+cmd='/usr/bin/cmake;-DBUILD_SHARED_LIBS=ON;-DCMAKE_INSTALL_PREFIX=/home/reu-actor/actor_ws/devel/.private/libsbp_catkin;-GUnix Makefiles;<SOURCE_DIR><SOURCE_SUBDIR>'

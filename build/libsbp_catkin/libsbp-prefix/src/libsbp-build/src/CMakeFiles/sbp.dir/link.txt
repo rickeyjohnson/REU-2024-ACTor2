@@ -1,0 +1,1 @@
+/usr/bin/cc -fPIC   -shared -Wl,-soname,libsbp.so -o libsbp.so CMakeFiles/sbp.dir/edc.c.o CMakeFiles/sbp.dir/sbp.c.o 

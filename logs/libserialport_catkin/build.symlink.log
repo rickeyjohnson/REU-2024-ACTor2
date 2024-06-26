@@ -1,0 +1,11 @@
+Symlinking /home/reu-actor/actor_ws/devel/lib/libserialport.so.0
+Symlinking /home/reu-actor/actor_ws/devel/lib/libserialport.a
+Symlinking /home/reu-actor/actor_ws/devel/lib/libserialport.la
+Symlinking /home/reu-actor/actor_ws/devel/lib/libserialport.so
+Symlinking /home/reu-actor/actor_ws/devel/lib/libserialport.so.0.1.0
+Symlinking /home/reu-actor/actor_ws/devel/lib/pkgconfig/libserialport_catkin.pc
+Symlinking /home/reu-actor/actor_ws/devel/lib/pkgconfig/libserialport.pc
+Symlinking /home/reu-actor/actor_ws/devel/include/libserialport.h
+Symlinking /home/reu-actor/actor_ws/devel/share/libserialport_catkin/cmake/libserialport-extras.cmake
+Symlinking /home/reu-actor/actor_ws/devel/share/libserialport_catkin/cmake/libserialport_catkinConfig-version.cmake
+Symlinking /home/reu-actor/actor_ws/devel/share/libserialport_catkin/cmake/libserialport_catkinConfig.cmake

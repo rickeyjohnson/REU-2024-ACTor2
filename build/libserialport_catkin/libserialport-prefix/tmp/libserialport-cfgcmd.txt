@@ -1,0 +1,1 @@
+cmd='$(CMAKE_BINARY_DIR)/libserialport-prefix/src/libserialport/autogen.sh;COMMAND;$(CMAKE_BINARY_DIR)/libserialport-prefix/src/libserialport/configure;--prefix=/home/reu-actor/actor_ws/devel/.private/libserialport_catkin'

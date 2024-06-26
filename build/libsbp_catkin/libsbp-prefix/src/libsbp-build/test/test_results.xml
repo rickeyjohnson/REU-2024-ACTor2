@@ -1,0 +1,693 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="http://check.sourceforge.net/xml/check_unittest.xslt"?>
+<testsuites xmlns="http://check.sourceforge.net/ns">
+  <datetime>2024-06-26 15:13:15</datetime>
+  <suite>
+    <title>Error Detection and Correction</title>
+    <test result="success">
+      <path>/home/reu-actor/actor_ws/build/libsbp_catkin/libsbp-prefix/src/libsbp/c/test</path>
+      <fn>check_edc.c:33</fn>
+      <id>test_crc16_ccitt</id>
+      <iteration>0</iteration>
+      <duration>0.000028</duration>
+      <description>CRC</description>
+      <message>Passed</message>
+    </test>
+  </suite>
+  <suite>
+    <title>SBP</title>
+    <test result="success">
+      <path>/home/reu-actor/actor_ws/build/libsbp_catkin/libsbp-prefix/src/libsbp/c/test</path>
+      <fn>check_sbp.c:841</fn>
+      <id>test_msg_buff_backwards_compatibility</id>
+      <iteration>0</iteration>
+      <duration>0.000045</duration>
+      <description>Core</description>
+      <message>Passed</message>
+    </test>
+    <test result="success">
+      <path>/home/reu-actor/actor_ws/build/libsbp_catkin/libsbp-prefix/src/libsbp/c/test</path>
+      <fn>check_sbp.c:728</fn>
+      <id>test_callbacks</id>
+      <iteration>0</iteration>
+      <duration>0.000061</duration>
+      <description>Core</description>
+      <message>Passed</message>
+    </test>
+    <test result="success">
+      <path>/home/reu-actor/actor_ws/build/libsbp_catkin/libsbp-prefix/src/libsbp/c/test</path>
+      <fn>check_sbp.c:646</fn>
+      <id>test_sbp_send_message</id>
+      <iteration>0</iteration>
+      <duration>0.000027</duration>
+      <description>Core</description>
+      <message>Passed</message>
+    </test>
+    <test result="success">
+      <path>/home/reu-actor/actor_ws/build/libsbp_catkin/libsbp-prefix/src/libsbp/c/test</path>
+      <fn>check_sbp.c:383</fn>
+      <id>test_sbp_process</id>
+      <iteration>0</iteration>
+      <duration>0.000231</duration>
+      <description>Core</description>
+      <message>Passed</message>
+    </test>
+    <test result="success">
+      <path>/home/reu-actor/actor_ws/build/libsbp_catkin/libsbp-prefix/src/libsbp/c/test</path>
+      <fn>check_sbp.c:522</fn>
+      <id>test_sbp_frame</id>
+      <iteration>0</iteration>
+      <duration>0.000213</duration>
+      <description>Core</description>
+      <message>Passed</message>
+    </test>
+    <test result="success">
+      <path>/home/reu-actor/actor_ws/build/libsbp_catkin/libsbp-prefix/src/libsbp/c/test</path>
+      <fn>check_sbp.c:811</fn>
+      <id>test_frame_callbacks</id>
+      <iteration>0</iteration>
+      <duration>0.000066</duration>
+      <description>Core</description>
+      <message>Passed</message>
+    </test>
+    <test result="success">
+      <path>/home/reu-actor/actor_ws/build/libsbp_catkin/libsbp-prefix/src/libsbp/c/test</path>
+      <fn>check_sbp.c:559</fn>
+      <id>test_sbp_all_msg</id>
+      <iteration>0</iteration>
+      <duration>0.000064</duration>
+      <description>Core</description>
+      <message>Passed</message>
+    </test>
+    <test result="success">
+      <path>/home/reu-actor/actor_ws/build/libsbp_catkin/libsbp-prefix/src/libsbp/c/test</path>
+      <fn>check_sbp.c:606</fn>
+      <id>test_sbp_big_msg</id>
+      <iteration>0</iteration>
+      <duration>0.000056</duration>
+      <description>Core</description>
+      <message>Passed</message>
+    </test>
+  </suite>
+  <suite>
+    <title>SBP generated test suite: auto_check_sbp_acquisition_1</title>
+    <test result="success">
+      <path>/home/reu-actor/actor_ws/build/libsbp_catkin/libsbp-prefix/src/libsbp/c/test</path>
+      <fn>auto_check_sbp_acquisition_1.c:317</fn>
+      <id>test_auto_check_sbp_acquisition_1</id>
+      <iteration>0</iteration>
+      <duration>0.000407</duration>
+      <description>Automated_Suite_auto_check_sbp_acquisition_1</description>
+      <message>Passed</message>
+    </test>
+  </suite>
+  <suite>
+    <title>SBP generated test suite: auto_check_sbp_acquisition_2</title>
+    <test result="success">
+      <path>/home/reu-actor/actor_ws/build/libsbp_catkin/libsbp-prefix/src/libsbp/c/test</path>
+      <fn>auto_check_sbp_acquisition_2.c:317</fn>
+      <id>test_auto_check_sbp_acquisition_2</id>
+      <iteration>0</iteration>
+      <duration>0.000318</duration>
+      <description>Automated_Suite_auto_check_sbp_acquisition_2</description>
+      <message>Passed</message>
+    </test>
+  </suite>
+  <suite>
+    <title>SBP generated test suite: auto_check_sbp_navigation_3</title>
+    <test result="success">
+      <path>/home/reu-actor/actor_ws/build/libsbp_catkin/libsbp-prefix/src/libsbp/c/test</path>
+      <fn>auto_check_sbp_navigation_3.c:129</fn>
+      <id>test_auto_check_sbp_navigation_3</id>
+      <iteration>0</iteration>
+      <duration>0.000059</duration>
+      <description>Automated_Suite_auto_check_sbp_navigation_3</description>
+      <message>Passed</message>
+    </test>
+  </suite>
+  <suite>
+    <title>SBP generated test suite: auto_check_sbp_navigation_4</title>
+    <test result="success">
+      <path>/home/reu-actor/actor_ws/build/libsbp_catkin/libsbp-prefix/src/libsbp/c/test</path>
+      <fn>auto_check_sbp_navigation_4.c:322</fn>
+      <id>test_auto_check_sbp_navigation_4</id>
+      <iteration>0</iteration>
+      <duration>0.000407</duration>
+      <description>Automated_Suite_auto_check_sbp_navigation_4</description>
+      <message>Passed</message>
+    </test>
+  </suite>
+  <suite>
+    <title>SBP generated test suite: auto_check_sbp_navigation_5</title>
+    <test result="success">
+      <path>/home/reu-actor/actor_ws/build/libsbp_catkin/libsbp-prefix/src/libsbp/c/test</path>
+      <fn>auto_check_sbp_navigation_5.c:322</fn>
+      <id>test_auto_check_sbp_navigation_5</id>
+      <iteration>0</iteration>
+      <duration>0.000449</duration>
+      <description>Automated_Suite_auto_check_sbp_navigation_5</description>
+      <message>Passed</message>
+    </test>
+  </suite>
+  <suite>
+    <title>SBP generated test suite: auto_check_sbp_navigation_6</title>
+    <test result="success">
+      <path>/home/reu-actor/actor_ws/build/libsbp_catkin/libsbp-prefix/src/libsbp/c/test</path>
+      <fn>auto_check_sbp_navigation_6.c:327</fn>
+      <id>test_auto_check_sbp_navigation_6</id>
+      <iteration>0</iteration>
+      <duration>0.000371</duration>
+      <description>Automated_Suite_auto_check_sbp_navigation_6</description>
+      <message>Passed</message>
+    </test>
+  </suite>
+  <suite>
+    <title>SBP generated test suite: auto_check_sbp_navigation_7</title>
+    <test result="success">
+      <path>/home/reu-actor/actor_ws/build/libsbp_catkin/libsbp-prefix/src/libsbp/c/test</path>
+      <fn>auto_check_sbp_navigation_7.c:327</fn>
+      <id>test_auto_check_sbp_navigation_7</id>
+      <iteration>0</iteration>
+      <duration>0.000367</duration>
+      <description>Automated_Suite_auto_check_sbp_navigation_7</description>
+      <message>Passed</message>
+    </test>
+  </suite>
+  <suite>
+    <title>SBP generated test suite: auto_check_sbp_navigation_8</title>
+    <test result="success">
+      <path>/home/reu-actor/actor_ws/build/libsbp_catkin/libsbp-prefix/src/libsbp/c/test</path>
+      <fn>auto_check_sbp_navigation_8.c:134</fn>
+      <id>test_auto_check_sbp_navigation_8</id>
+      <iteration>0</iteration>
+      <duration>0.000083</duration>
+      <description>Automated_Suite_auto_check_sbp_navigation_8</description>
+      <message>Passed</message>
+    </test>
+  </suite>
+  <suite>
+    <title>SBP generated test suite: auto_check_sbp_navigation_9</title>
+    <test result="success">
+      <path>/home/reu-actor/actor_ws/build/libsbp_catkin/libsbp-prefix/src/libsbp/c/test</path>
+      <fn>auto_check_sbp_navigation_9.c:225</fn>
+      <id>test_auto_check_sbp_navigation_9</id>
+      <iteration>0</iteration>
+      <duration>0.000213</duration>
+      <description>Automated_Suite_auto_check_sbp_navigation_9</description>
+      <message>Passed</message>
+    </test>
+  </suite>
+  <suite>
+    <title>SBP generated test suite: auto_check_sbp_navigation_10</title>
+    <test result="success">
+      <path>/home/reu-actor/actor_ws/build/libsbp_catkin/libsbp-prefix/src/libsbp/c/test</path>
+      <fn>auto_check_sbp_navigation_10.c:307</fn>
+      <id>test_auto_check_sbp_navigation_10</id>
+      <iteration>0</iteration>
+      <duration>0.000301</duration>
+      <description>Automated_Suite_auto_check_sbp_navigation_10</description>
+      <message>Passed</message>
+    </test>
+  </suite>
+  <suite>
+    <title>SBP generated test suite: auto_check_sbp_navigation_11</title>
+    <test result="success">
+      <path>/home/reu-actor/actor_ws/build/libsbp_catkin/libsbp-prefix/src/libsbp/c/test</path>
+      <fn>auto_check_sbp_navigation_11.c:307</fn>
+      <id>test_auto_check_sbp_navigation_11</id>
+      <iteration>0</iteration>
+      <duration>0.000336</duration>
+      <description>Automated_Suite_auto_check_sbp_navigation_11</description>
+      <message>Passed</message>
+    </test>
+  </suite>
+  <suite>
+    <title>SBP generated test suite: auto_check_sbp_navigation_12</title>
+    <test result="success">
+      <path>/home/reu-actor/actor_ws/build/libsbp_catkin/libsbp-prefix/src/libsbp/c/test</path>
+      <fn>auto_check_sbp_navigation_12.c:275</fn>
+      <id>test_auto_check_sbp_navigation_12</id>
+      <iteration>0</iteration>
+      <duration>0.000297</duration>
+      <description>Automated_Suite_auto_check_sbp_navigation_12</description>
+      <message>Passed</message>
+    </test>
+  </suite>
+  <suite>
+    <title>SBP generated test suite: auto_check_sbp_navigation_13</title>
+    <test result="success">
+      <path>/home/reu-actor/actor_ws/build/libsbp_catkin/libsbp-prefix/src/libsbp/c/test</path>
+      <fn>auto_check_sbp_navigation_13.c:139</fn>
+      <id>test_auto_check_sbp_navigation_13</id>
+      <iteration>0</iteration>
+      <duration>0.000102</duration>
+      <description>Automated_Suite_auto_check_sbp_navigation_13</description>
+      <message>Passed</message>
+    </test>
+  </suite>
+  <suite>
+    <title>SBP generated test suite: auto_check_sbp_navigation_14</title>
+    <test result="success">
+      <path>/home/reu-actor/actor_ws/build/libsbp_catkin/libsbp-prefix/src/libsbp/c/test</path>
+      <fn>auto_check_sbp_navigation_14.c:322</fn>
+      <id>test_auto_check_sbp_navigation_14</id>
+      <iteration>0</iteration>
+      <duration>0.000356</duration>
+      <description>Automated_Suite_auto_check_sbp_navigation_14</description>
+      <message>Passed</message>
+    </test>
+  </suite>
+  <suite>
+    <title>SBP generated test suite: auto_check_sbp_navigation_15</title>
+    <test result="success">
+      <path>/home/reu-actor/actor_ws/build/libsbp_catkin/libsbp-prefix/src/libsbp/c/test</path>
+      <fn>auto_check_sbp_navigation_15.c:327</fn>
+      <id>test_auto_check_sbp_navigation_15</id>
+      <iteration>0</iteration>
+      <duration>0.000350</duration>
+      <description>Automated_Suite_auto_check_sbp_navigation_15</description>
+      <message>Passed</message>
+    </test>
+  </suite>
+  <suite>
+    <title>SBP generated test suite: auto_check_sbp_navigation_16</title>
+    <test result="success">
+      <path>/home/reu-actor/actor_ws/build/libsbp_catkin/libsbp-prefix/src/libsbp/c/test</path>
+      <fn>auto_check_sbp_navigation_16.c:139</fn>
+      <id>test_auto_check_sbp_navigation_16</id>
+      <iteration>0</iteration>
+      <duration>0.000092</duration>
+      <description>Automated_Suite_auto_check_sbp_navigation_16</description>
+      <message>Passed</message>
+    </test>
+  </suite>
+  <suite>
+    <title>SBP generated test suite: auto_check_sbp_navigation_17</title>
+    <test result="success">
+      <path>/home/reu-actor/actor_ws/build/libsbp_catkin/libsbp-prefix/src/libsbp/c/test</path>
+      <fn>auto_check_sbp_navigation_17.c:327</fn>
+      <id>test_auto_check_sbp_navigation_17</id>
+      <iteration>0</iteration>
+      <duration>0.000428</duration>
+      <description>Automated_Suite_auto_check_sbp_navigation_17</description>
+      <message>Passed</message>
+    </test>
+  </suite>
+  <suite>
+    <title>SBP generated test suite: auto_check_sbp_navigation_18</title>
+    <test result="success">
+      <path>/home/reu-actor/actor_ws/build/libsbp_catkin/libsbp-prefix/src/libsbp/c/test</path>
+      <fn>auto_check_sbp_navigation_18.c:139</fn>
+      <id>test_auto_check_sbp_navigation_18</id>
+      <iteration>0</iteration>
+      <duration>0.000094</duration>
+      <description>Automated_Suite_auto_check_sbp_navigation_18</description>
+      <message>Passed</message>
+    </test>
+  </suite>
+  <suite>
+    <title>SBP generated test suite: auto_check_sbp_navigation_19</title>
+    <test result="success">
+      <path>/home/reu-actor/actor_ws/build/libsbp_catkin/libsbp-prefix/src/libsbp/c/test</path>
+      <fn>auto_check_sbp_navigation_19.c:322</fn>
+      <id>test_auto_check_sbp_navigation_19</id>
+      <iteration>0</iteration>
+      <duration>0.000504</duration>
+      <description>Automated_Suite_auto_check_sbp_navigation_19</description>
+      <message>Passed</message>
+    </test>
+  </suite>
+  <suite>
+    <title>SBP generated test suite: auto_check_sbp_navigation_20</title>
+    <test result="success">
+      <path>/home/reu-actor/actor_ws/build/libsbp_catkin/libsbp-prefix/src/libsbp/c/test</path>
+      <fn>auto_check_sbp_navigation_20.c:139</fn>
+      <id>test_auto_check_sbp_navigation_20</id>
+      <iteration>0</iteration>
+      <duration>0.000098</duration>
+      <description>Automated_Suite_auto_check_sbp_navigation_20</description>
+      <message>Passed</message>
+    </test>
+  </suite>
+  <suite>
+    <title>SBP generated test suite: auto_check_sbp_navigation_21</title>
+    <test result="success">
+      <path>/home/reu-actor/actor_ws/build/libsbp_catkin/libsbp-prefix/src/libsbp/c/test</path>
+      <fn>auto_check_sbp_navigation_21.c:322</fn>
+      <id>test_auto_check_sbp_navigation_21</id>
+      <iteration>0</iteration>
+      <duration>0.000365</duration>
+      <description>Automated_Suite_auto_check_sbp_navigation_21</description>
+      <message>Passed</message>
+    </test>
+  </suite>
+  <suite>
+    <title>SBP generated test suite: auto_check_sbp_navigation_22</title>
+    <test result="success">
+      <path>/home/reu-actor/actor_ws/build/libsbp_catkin/libsbp-prefix/src/libsbp/c/test</path>
+      <fn>auto_check_sbp_navigation_22.c:327</fn>
+      <id>test_auto_check_sbp_navigation_22</id>
+      <iteration>0</iteration>
+      <duration>0.000370</duration>
+      <description>Automated_Suite_auto_check_sbp_navigation_22</description>
+      <message>Passed</message>
+    </test>
+  </suite>
+  <suite>
+    <title>SBP generated test suite: auto_check_sbp_navigation_23</title>
+    <test result="success">
+      <path>/home/reu-actor/actor_ws/build/libsbp_catkin/libsbp-prefix/src/libsbp/c/test</path>
+      <fn>auto_check_sbp_navigation_23.c:138</fn>
+      <id>test_auto_check_sbp_navigation_23</id>
+      <iteration>0</iteration>
+      <duration>0.000107</duration>
+      <description>Automated_Suite_auto_check_sbp_navigation_23</description>
+      <message>Passed</message>
+    </test>
+  </suite>
+  <suite>
+    <title>SBP generated test suite: auto_check_sbp_navigation_24</title>
+    <test result="success">
+      <path>/home/reu-actor/actor_ws/build/libsbp_catkin/libsbp-prefix/src/libsbp/c/test</path>
+      <fn>auto_check_sbp_navigation_24.c:327</fn>
+      <id>test_auto_check_sbp_navigation_24</id>
+      <iteration>0</iteration>
+      <duration>0.000413</duration>
+      <description>Automated_Suite_auto_check_sbp_navigation_24</description>
+      <message>Passed</message>
+    </test>
+  </suite>
+  <suite>
+    <title>SBP generated test suite: auto_check_sbp_observation_25</title>
+    <test result="success">
+      <path>/home/reu-actor/actor_ws/build/libsbp_catkin/libsbp-prefix/src/libsbp/c/test</path>
+      <fn>auto_check_sbp_observation_25.c:470</fn>
+      <id>test_auto_check_sbp_observation_25</id>
+      <iteration>0</iteration>
+      <duration>0.000777</duration>
+      <description>Automated_Suite_auto_check_sbp_observation_25</description>
+      <message>Passed</message>
+    </test>
+  </suite>
+  <suite>
+    <title>SBP generated test suite: auto_check_sbp_observation_26</title>
+    <test result="success">
+      <path>/home/reu-actor/actor_ws/build/libsbp_catkin/libsbp-prefix/src/libsbp/c/test</path>
+      <fn>auto_check_sbp_observation_26.c:494</fn>
+      <id>test_auto_check_sbp_observation_26</id>
+      <iteration>0</iteration>
+      <duration>0.000781</duration>
+      <description>Automated_Suite_auto_check_sbp_observation_26</description>
+      <message>Passed</message>
+    </test>
+  </suite>
+  <suite>
+    <title>SBP generated test suite: auto_check_sbp_orientation_27</title>
+    <test result="success">
+      <path>/home/reu-actor/actor_ws/build/libsbp_catkin/libsbp-prefix/src/libsbp/c/test</path>
+      <fn>auto_check_sbp_orientation_27.c:132</fn>
+      <id>test_auto_check_sbp_orientation_27</id>
+      <iteration>0</iteration>
+      <duration>0.000061</duration>
+      <description>Automated_Suite_auto_check_sbp_orientation_27</description>
+      <message>Passed</message>
+    </test>
+  </suite>
+  <suite>
+    <title>SBP generated test suite: auto_check_sbp_orientation_28</title>
+    <test result="success">
+      <path>/home/reu-actor/actor_ws/build/libsbp_catkin/libsbp-prefix/src/libsbp/c/test</path>
+      <fn>auto_check_sbp_orientation_28.c:135</fn>
+      <id>test_auto_check_sbp_orientation_28</id>
+      <iteration>0</iteration>
+      <duration>0.000104</duration>
+      <description>Automated_Suite_auto_check_sbp_orientation_28</description>
+      <message>Passed</message>
+    </test>
+  </suite>
+  <suite>
+    <title>SBP generated test suite: auto_check_sbp_orientation_29</title>
+    <test result="success">
+      <path>/home/reu-actor/actor_ws/build/libsbp_catkin/libsbp-prefix/src/libsbp/c/test</path>
+      <fn>auto_check_sbp_orientation_29.c:137</fn>
+      <id>test_auto_check_sbp_orientation_29</id>
+      <iteration>0</iteration>
+      <duration>0.000096</duration>
+      <description>Automated_Suite_auto_check_sbp_orientation_29</description>
+      <message>Passed</message>
+    </test>
+  </suite>
+  <suite>
+    <title>SBP generated test suite: auto_check_sbp_piksi_30</title>
+    <test result="success">
+      <path>/home/reu-actor/actor_ws/build/libsbp_catkin/libsbp-prefix/src/libsbp/c/test</path>
+      <fn>auto_check_sbp_piksi_30.c:128</fn>
+      <id>test_auto_check_sbp_piksi_30</id>
+      <iteration>0</iteration>
+      <duration>0.000051</duration>
+      <description>Automated_Suite_auto_check_sbp_piksi_30</description>
+      <message>Passed</message>
+    </test>
+  </suite>
+  <suite>
+    <title>SBP generated test suite: auto_check_sbp_piksi_31</title>
+    <test result="success">
+      <path>/home/reu-actor/actor_ws/build/libsbp_catkin/libsbp-prefix/src/libsbp/c/test</path>
+      <fn>auto_check_sbp_piksi_31.c:302</fn>
+      <id>test_auto_check_sbp_piksi_31</id>
+      <iteration>0</iteration>
+      <duration>0.000247</duration>
+      <description>Automated_Suite_auto_check_sbp_piksi_31</description>
+      <message>Passed</message>
+    </test>
+  </suite>
+  <suite>
+    <title>SBP generated test suite: auto_check_sbp_piksi_32</title>
+    <test result="success">
+      <path>/home/reu-actor/actor_ws/build/libsbp_catkin/libsbp-prefix/src/libsbp/c/test</path>
+      <fn>auto_check_sbp_piksi_32.c:211</fn>
+      <id>test_auto_check_sbp_piksi_32</id>
+      <iteration>0</iteration>
+      <duration>0.000215</duration>
+      <description>Automated_Suite_auto_check_sbp_piksi_32</description>
+      <message>Passed</message>
+    </test>
+  </suite>
+  <suite>
+    <title>SBP generated test suite: auto_check_sbp_settings_33</title>
+    <test result="success">
+      <path>/home/reu-actor/actor_ws/build/libsbp_catkin/libsbp-prefix/src/libsbp/c/test</path>
+      <fn>auto_check_sbp_settings_33.c:121</fn>
+      <id>test_auto_check_sbp_settings_33</id>
+      <iteration>0</iteration>
+      <duration>0.000062</duration>
+      <description>Automated_Suite_auto_check_sbp_settings_33</description>
+      <message>Passed</message>
+    </test>
+  </suite>
+  <suite>
+    <title>SBP generated test suite: auto_check_sbp_settings_34</title>
+    <test result="success">
+      <path>/home/reu-actor/actor_ws/build/libsbp_catkin/libsbp-prefix/src/libsbp/c/test</path>
+      <fn>auto_check_sbp_settings_34.c:297</fn>
+      <id>test_auto_check_sbp_settings_34</id>
+      <iteration>0</iteration>
+      <duration>0.000352</duration>
+      <description>Automated_Suite_auto_check_sbp_settings_34</description>
+      <message>Passed</message>
+    </test>
+  </suite>
+  <suite>
+    <title>SBP generated test suite: auto_check_sbp_system_35</title>
+    <test result="success">
+      <path>/home/reu-actor/actor_ws/build/libsbp_catkin/libsbp-prefix/src/libsbp/c/test</path>
+      <fn>auto_check_sbp_system_35.c:131</fn>
+      <id>test_auto_check_sbp_system_35</id>
+      <iteration>0</iteration>
+      <duration>0.000070</duration>
+      <description>Automated_Suite_auto_check_sbp_system_35</description>
+      <message>Passed</message>
+    </test>
+  </suite>
+  <suite>
+    <title>SBP generated test suite: auto_check_sbp_system_36</title>
+    <test result="success">
+      <path>/home/reu-actor/actor_ws/build/libsbp_catkin/libsbp-prefix/src/libsbp/c/test</path>
+      <fn>auto_check_sbp_system_36.c:128</fn>
+      <id>test_auto_check_sbp_system_36</id>
+      <iteration>0</iteration>
+      <duration>0.000058</duration>
+      <description>Automated_Suite_auto_check_sbp_system_36</description>
+      <message>Passed</message>
+    </test>
+  </suite>
+  <suite>
+    <title>SBP generated test suite: auto_check_sbp_system_37</title>
+    <test result="success">
+      <path>/home/reu-actor/actor_ws/build/libsbp_catkin/libsbp-prefix/src/libsbp/c/test</path>
+      <fn>auto_check_sbp_system_37.c:130</fn>
+      <id>test_auto_check_sbp_system_37</id>
+      <iteration>0</iteration>
+      <duration>0.000064</duration>
+      <description>Automated_Suite_auto_check_sbp_system_37</description>
+      <message>Passed</message>
+    </test>
+  </suite>
+  <suite>
+    <title>SBP generated test suite: auto_check_sbp_acquisition_38</title>
+    <test result="success">
+      <path>/home/reu-actor/actor_ws/build/libsbp_catkin/libsbp-prefix/src/libsbp/c/test</path>
+      <fn>auto_check_sbp_acquisition_38.c:351</fn>
+      <id>test_auto_check_sbp_acquisition_38</id>
+      <iteration>0</iteration>
+      <duration>0.000437</duration>
+      <description>Automated_Suite_auto_check_sbp_acquisition_38</description>
+      <message>Passed</message>
+    </test>
+  </suite>
+  <suite>
+    <title>SBP generated test suite: auto_check_sbp_bootload_39</title>
+    <test result="success">
+      <path>/home/reu-actor/actor_ws/build/libsbp_catkin/libsbp-prefix/src/libsbp/c/test</path>
+      <fn>auto_check_sbp_bootload_39.c:173</fn>
+      <id>test_auto_check_sbp_bootload_39</id>
+      <iteration>0</iteration>
+      <duration>0.000121</duration>
+      <description>Automated_Suite_auto_check_sbp_bootload_39</description>
+      <message>Passed</message>
+    </test>
+  </suite>
+  <suite>
+    <title>SBP generated test suite: auto_check_sbp_ext_events_40</title>
+    <test result="success">
+      <path>/home/reu-actor/actor_ws/build/libsbp_catkin/libsbp-prefix/src/libsbp/c/test</path>
+      <fn>auto_check_sbp_ext_events_40.c:132</fn>
+      <id>test_auto_check_sbp_ext_events_40</id>
+      <iteration>0</iteration>
+      <duration>0.000074</duration>
+      <description>Automated_Suite_auto_check_sbp_ext_events_40</description>
+      <message>Passed</message>
+    </test>
+  </suite>
+  <suite>
+    <title>SBP generated test suite: auto_check_sbp_logging_41</title>
+    <test result="success">
+      <path>/home/reu-actor/actor_ws/build/libsbp_catkin/libsbp-prefix/src/libsbp/c/test</path>
+      <fn>auto_check_sbp_logging_41.c:333</fn>
+      <id>test_auto_check_sbp_logging_41</id>
+      <iteration>0</iteration>
+      <duration>0.000348</duration>
+      <description>Automated_Suite_auto_check_sbp_logging_41</description>
+      <message>Passed</message>
+    </test>
+  </suite>
+  <suite>
+    <title>SBP generated test suite: auto_check_sbp_logging_42</title>
+    <test result="success">
+      <path>/home/reu-actor/actor_ws/build/libsbp_catkin/libsbp-prefix/src/libsbp/c/test</path>
+      <fn>auto_check_sbp_logging_42.c:130</fn>
+      <id>test_auto_check_sbp_logging_42</id>
+      <iteration>0</iteration>
+      <duration>0.000061</duration>
+      <description>Automated_Suite_auto_check_sbp_logging_42</description>
+      <message>Passed</message>
+    </test>
+  </suite>
+  <suite>
+    <title>SBP generated test suite: auto_check_sbp_navigation_43</title>
+    <test result="success">
+      <path>/home/reu-actor/actor_ws/build/libsbp_catkin/libsbp-prefix/src/libsbp/c/test</path>
+      <fn>auto_check_sbp_navigation_43.c:2337</fn>
+      <id>test_auto_check_sbp_navigation_43</id>
+      <iteration>0</iteration>
+      <duration>0.002479</duration>
+      <description>Automated_Suite_auto_check_sbp_navigation_43</description>
+      <message>Passed</message>
+    </test>
+  </suite>
+  <suite>
+    <title>SBP generated test suite: auto_check_sbp_observation_44</title>
+    <test result="success">
+      <path>/home/reu-actor/actor_ws/build/libsbp_catkin/libsbp-prefix/src/libsbp/c/test</path>
+      <fn>auto_check_sbp_observation_44.c:903</fn>
+      <id>test_auto_check_sbp_observation_44</id>
+      <iteration>0</iteration>
+      <duration>0.001247</duration>
+      <description>Automated_Suite_auto_check_sbp_observation_44</description>
+      <message>Passed</message>
+    </test>
+  </suite>
+  <suite>
+    <title>SBP generated test suite: auto_check_sbp_piksi_45</title>
+    <test result="success">
+      <path>/home/reu-actor/actor_ws/build/libsbp_catkin/libsbp-prefix/src/libsbp/c/test</path>
+      <fn>auto_check_sbp_piksi_45.c:963</fn>
+      <id>test_auto_check_sbp_piksi_45</id>
+      <iteration>0</iteration>
+      <duration>0.001027</duration>
+      <description>Automated_Suite_auto_check_sbp_piksi_45</description>
+      <message>Passed</message>
+    </test>
+  </suite>
+  <suite>
+    <title>SBP generated test suite: auto_check_sbp_system_46</title>
+    <test result="success">
+      <path>/home/reu-actor/actor_ws/build/libsbp_catkin/libsbp-prefix/src/libsbp/c/test</path>
+      <fn>auto_check_sbp_system_46.c:169</fn>
+      <id>test_auto_check_sbp_system_46</id>
+      <iteration>0</iteration>
+      <duration>0.000092</duration>
+      <description>Automated_Suite_auto_check_sbp_system_46</description>
+      <message>Passed</message>
+    </test>
+  </suite>
+  <suite>
+    <title>SBP generated test suite: auto_check_sbp_tracking_47</title>
+    <test result="success">
+      <path>/home/reu-actor/actor_ws/build/libsbp_catkin/libsbp-prefix/src/libsbp/c/test</path>
+      <fn>auto_check_sbp_tracking_47.c:525</fn>
+      <id>test_auto_check_sbp_tracking_47</id>
+      <iteration>0</iteration>
+      <duration>0.000932</duration>
+      <description>Automated_Suite_auto_check_sbp_tracking_47</description>
+      <message>Passed</message>
+    </test>
+  </suite>
+  <suite>
+    <title>SBP generated test suite: auto_check_sbp_tracking_48</title>
+    <test result="success">
+      <path>/home/reu-actor/actor_ws/build/libsbp_catkin/libsbp-prefix/src/libsbp/c/test</path>
+      <fn>auto_check_sbp_tracking_48.c:562</fn>
+      <id>test_auto_check_sbp_tracking_48</id>
+      <iteration>0</iteration>
+      <duration>0.000817</duration>
+      <description>Automated_Suite_auto_check_sbp_tracking_48</description>
+      <message>Passed</message>
+    </test>
+  </suite>
+  <suite>
+    <title>SBP generated test suite: auto_check_sbp_tracking_49</title>
+    <test result="success">
+      <path>/home/reu-actor/actor_ws/build/libsbp_catkin/libsbp-prefix/src/libsbp/c/test</path>
+      <fn>auto_check_sbp_tracking_49.c:412</fn>
+      <id>test_auto_check_sbp_tracking_49</id>
+      <iteration>0</iteration>
+      <duration>0.000461</duration>
+      <description>Automated_Suite_auto_check_sbp_tracking_49</description>
+      <message>Passed</message>
+    </test>
+  </suite>
+  <suite>
+    <title>SBP generated test suite: auto_check_sbp_vehicle_50</title>
+    <test result="success">
+      <path>/home/reu-actor/actor_ws/build/libsbp_catkin/libsbp-prefix/src/libsbp/c/test</path>
+      <fn>auto_check_sbp_vehicle_50.c:130</fn>
+      <id>test_auto_check_sbp_vehicle_50</id>
+      <iteration>0</iteration>
+      <duration>0.000046</duration>
+      <description>Automated_Suite_auto_check_sbp_vehicle_50</description>
+      <message>Passed</message>
+    </test>
+  </suite>
+  <duration>0.023349</duration>
+</testsuites>

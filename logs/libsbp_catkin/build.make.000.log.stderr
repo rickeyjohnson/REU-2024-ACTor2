@@ -1,0 +1,50 @@
+Cloning into 'libsbp'...
+Note: switching to 'v2.7.4'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+HEAD is now at dfc65520 update PDF
+Submodule 'c/cmake/common' (https://github.com/swift-nav/cmake.git) registered for path 'c/cmake/common'
+Submodule 'c/third_party/check' (https://github.com/swift-nav/check.git) registered for path 'c/third_party/check'
+Cloning into '/home/reu-actor/actor_ws/build/libsbp_catkin/libsbp-prefix/src/libsbp/c/cmake/common'...
+Cloning into '/home/reu-actor/actor_ws/build/libsbp_catkin/libsbp-prefix/src/libsbp/c/third_party/check'...
+CMake Warning at docs/CMakeLists.txt:7 (message):
+  Doxygen not found, the documentation will not be built.
+
+
+[01m[K/home/reu-actor/actor_ws/build/libsbp_catkin/libsbp-prefix/src/libsbp/c/third_party/check/src/check.c:[m[K In function ‘[01m[K_ck_assert_failed[m[K’:
+[01m[K/home/reu-actor/actor_ws/build/libsbp_catkin/libsbp-prefix/src/libsbp/c/third_party/check/src/check.c:393:9:[m[K [01;35m[Kwarning: [m[Kimplicit declaration of function ‘[01m[K_exit[m[K’ [[01;35m[K-Wimplicit-function-declaration[m[K]
+  393 |         [01;35m[K_exit[m[K(1);
+      |         [01;35m[K^~~~~[m[K
+[01m[K/home/reu-actor/actor_ws/build/libsbp_catkin/libsbp-prefix/src/libsbp/c/third_party/check/src/check.c:393:9:[m[K [01;35m[Kwarning: [m[Kincompatible implicit declaration of built-in function ‘[01m[K_exit[m[K’
+[01m[K/home/reu-actor/actor_ws/build/libsbp_catkin/libsbp-prefix/src/libsbp/c/third_party/check/src/check_msg.c:[m[K In function ‘[01m[Kopen_tmp_file[m[K’:
+[01m[K/home/reu-actor/actor_ws/build/libsbp_catkin/libsbp-prefix/src/libsbp/c/third_party/check/src/check_msg.c:303:18:[m[K [01;35m[Kwarning: [m[Kimplicit declaration of function ‘[01m[Kunlink[m[K’ [[01;35m[K-Wimplicit-function-declaration[m[K]
+  303 |         if (0 == [01;35m[Kunlink[m[K (*name) || NULL == file)
+      |                  [01;35m[K^~~~~~[m[K
+[01m[K/home/reu-actor/actor_ws/build/libsbp_catkin/libsbp-prefix/src/libsbp/c/third_party/check/src/check_run.c:[m[K In function ‘[01m[Ksig_handler[m[K’:
+[01m[K/home/reu-actor/actor_ws/build/libsbp_catkin/libsbp-prefix/src/libsbp/c/third_party/check/src/check_run.c:133:29:[m[K [01;35m[Kwarning: [m[Kimplicit declaration of function ‘[01m[Kgetpgrp[m[K’ [[01;35m[K-Wimplicit-function-declaration[m[K]
+  133 |             own_group_pid = [01;35m[Kgetpgrp[m[K();
+      |                             [01;35m[K^~~~~~~[m[K
+[01m[K/home/reu-actor/actor_ws/build/libsbp_catkin/libsbp-prefix/src/libsbp/c/third_party/check/src/check_run.c:[m[K In function ‘[01m[Ktcase_run_tfun_fork[m[K’:
+[01m[K/home/reu-actor/actor_ws/build/libsbp_catkin/libsbp-prefix/src/libsbp/c/third_party/check/src/check_run.c:484:11:[m[K [01;35m[Kwarning: [m[Kimplicit declaration of function ‘[01m[Kfork[m[K’ [[01;35m[K-Wimplicit-function-declaration[m[K]
+  484 |     pid = [01;35m[Kfork[m[K();
+      |           [01;35m[K^~~~[m[K
+[01m[K/home/reu-actor/actor_ws/build/libsbp_catkin/libsbp-prefix/src/libsbp/c/third_party/check/src/check_run.c:489:9:[m[K [01;35m[Kwarning: [m[Kimplicit declaration of function ‘[01m[Ksetpgid[m[K’ [[01;35m[K-Wimplicit-function-declaration[m[K]
+  489 |         [01;35m[Ksetpgid[m[K(0, 0);
+      |         [01;35m[K^~~~~~~[m[K
+[01m[K/home/reu-actor/actor_ws/build/libsbp_catkin/libsbp-prefix/src/libsbp/c/third_party/check/src/check_run.c:519:25:[m[K [01;35m[Kwarning: [m[Kimplicit declaration of function ‘[01m[Kwaitpid[m[K’ [[01;35m[K-Wimplicit-function-declaration[m[K]
+  519 |                 pid_w = [01;35m[Kwaitpid[m[K(pid, &status, 0);
+      |                         [01;35m[K^~~~~~~[m[K

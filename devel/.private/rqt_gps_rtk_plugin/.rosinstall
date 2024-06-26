@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/reu-actor/actor_ws/devel/.private/rqt_gps_rtk_plugin/setup.sh

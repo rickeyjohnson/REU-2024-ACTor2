@@ -1,0 +1,13 @@
+# Target labels
+ libserialport
+# Source files and their labels
+/home/reu-actor/actor_ws/build/libserialport_catkin/CMakeFiles/libserialport
+/home/reu-actor/actor_ws/build/libserialport_catkin/CMakeFiles/libserialport.rule
+/home/reu-actor/actor_ws/build/libserialport_catkin/CMakeFiles/libserialport-complete.rule
+/home/reu-actor/actor_ws/build/libserialport_catkin/libserialport-prefix/src/libserialport-stamp/libserialport-install.rule
+/home/reu-actor/actor_ws/build/libserialport_catkin/libserialport-prefix/src/libserialport-stamp/libserialport-mkdir.rule
+/home/reu-actor/actor_ws/build/libserialport_catkin/libserialport-prefix/src/libserialport-stamp/libserialport-download.rule
+/home/reu-actor/actor_ws/build/libserialport_catkin/libserialport-prefix/src/libserialport-stamp/libserialport-update.rule
+/home/reu-actor/actor_ws/build/libserialport_catkin/libserialport-prefix/src/libserialport-stamp/libserialport-patch.rule
+/home/reu-actor/actor_ws/build/libserialport_catkin/libserialport-prefix/src/libserialport-stamp/libserialport-configure.rule
+/home/reu-actor/actor_ws/build/libserialport_catkin/libserialport-prefix/src/libserialport-stamp/libserialport-build.rule

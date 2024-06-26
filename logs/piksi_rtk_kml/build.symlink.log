@@ -1,0 +1,7 @@
+Symlinking /home/reu-actor/actor_ws/devel/lib/pkgconfig/piksi_rtk_kml.pc
+Symlinking /home/reu-actor/actor_ws/devel/lib/piksi_rtk_kml/piksi_rtk_kml
+Symlinking /home/reu-actor/actor_ws/devel/lib/piksi_rtk_kml/cmake.lock
+Symlinking /home/reu-actor/actor_ws/devel/lib/python3/dist-packages/piksi_rtk_kml/__init__.py
+Symlinking /home/reu-actor/actor_ws/devel/bin/piksi_rtk_kml
+Symlinking /home/reu-actor/actor_ws/devel/share/piksi_rtk_kml/cmake/piksi_rtk_kmlConfig-version.cmake
+Symlinking /home/reu-actor/actor_ws/devel/share/piksi_rtk_kml/cmake/piksi_rtk_kmlConfig.cmake

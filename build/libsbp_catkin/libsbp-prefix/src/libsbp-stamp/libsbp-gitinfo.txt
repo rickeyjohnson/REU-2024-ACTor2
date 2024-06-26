@@ -1,0 +1,3 @@
+repository='https://github.com/swift-nav/libsbp.git'
+module=''
+tag='origin'

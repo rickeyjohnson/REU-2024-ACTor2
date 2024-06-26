@@ -9,7 +9,6 @@
 # modified environment variables
 export CMAKE_PREFIX_PATH="/home/reu-actor/actor_ws/devel/.private/piksi_pps_sync:$CMAKE_PREFIX_PATH"
 export LD_LIBRARY_PATH="/home/reu-actor/actor_ws/devel/.private/piksi_pps_sync/lib:$LD_LIBRARY_PATH"
-export PATH="/home/reu-actor/actor_ws/devel/.private/piksi_pps_sync/bin:$PATH"
 export PKG_CONFIG_PATH="/home/reu-actor/actor_ws/devel/.private/piksi_pps_sync/lib/pkgconfig:$PKG_CONFIG_PATH"
 export PWD='/home/reu-actor/actor_ws/build/piksi_pps_sync'
 export PYTHONPATH="/home/reu-actor/actor_ws/devel/.private/piksi_pps_sync/lib/python3/dist-packages:$PYTHONPATH"

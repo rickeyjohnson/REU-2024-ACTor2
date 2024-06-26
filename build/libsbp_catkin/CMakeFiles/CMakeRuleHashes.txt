@@ -1,0 +1,11 @@
+# Hashes of file build rules.
+68dceb9dbc3e77600b3de59f4d61d5a6 CMakeFiles/clean_test_results
+8e15c80bf9b4d1a4a58df5ccda5e5d63 CMakeFiles/libsbp
+6ba922cf08cf8b8a92e641ae9cb615ce CMakeFiles/libsbp-complete
+551d4a1c315cf0e8cd57b527fdcb3079 libsbp-prefix/src/libsbp-stamp/libsbp-build
+703e3fd375bc0de2979ea90edf3767d8 libsbp-prefix/src/libsbp-stamp/libsbp-configure
+7990c8a0a67ce26603cc4035c4edd0c5 libsbp-prefix/src/libsbp-stamp/libsbp-download
+333595412cae0dafa69012554a60f622 libsbp-prefix/src/libsbp-stamp/libsbp-install
+944a640b95aed991961389058a64d953 libsbp-prefix/src/libsbp-stamp/libsbp-mkdir
+5666e89af0376924c4eb49ad822ed132 libsbp-prefix/src/libsbp-stamp/libsbp-patch
+2508fd29673514d0bc46f14ce2407b00 libsbp-prefix/src/libsbp-stamp/libsbp-update

@@ -1,0 +1,316 @@
+Determining if the function _getpid exists failed with the following output:
+Change Dir: /home/reu-actor/actor_ws/build/libsbp_catkin/libsbp-prefix/src/libsbp-build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_3df1d/fast && make[3]: Entering directory '/home/reu-actor/actor_ws/build/libsbp_catkin/libsbp-prefix/src/libsbp-build/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_3df1d.dir/build.make CMakeFiles/cmTC_3df1d.dir/build
+make[4]: Entering directory '/home/reu-actor/actor_ws/build/libsbp_catkin/libsbp-prefix/src/libsbp-build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_3df1d.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=_getpid   -o CMakeFiles/cmTC_3df1d.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_3df1d
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3df1d.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=_getpid    -rdynamic CMakeFiles/cmTC_3df1d.dir/CheckFunctionExists.c.o  -o cmTC_3df1d 
+/usr/bin/ld: CMakeFiles/cmTC_3df1d.dir/CheckFunctionExists.c.o: in function `main':
+CheckFunctionExists.c:(.text+0x14): undefined reference to `_getpid'
+collect2: error: ld returned 1 exit status
+make[4]: *** [CMakeFiles/cmTC_3df1d.dir/build.make:87: cmTC_3df1d] Error 1
+make[4]: Leaving directory '/home/reu-actor/actor_ws/build/libsbp_catkin/libsbp-prefix/src/libsbp-build/CMakeFiles/CMakeTmp'
+make[3]: *** [Makefile:121: cmTC_3df1d/fast] Error 2
+make[3]: Leaving directory '/home/reu-actor/actor_ws/build/libsbp_catkin/libsbp-prefix/src/libsbp-build/CMakeFiles/CMakeTmp'
+
+
+
+Determining if the function _strdup exists failed with the following output:
+Change Dir: /home/reu-actor/actor_ws/build/libsbp_catkin/libsbp-prefix/src/libsbp-build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_ae250/fast && make[3]: Entering directory '/home/reu-actor/actor_ws/build/libsbp_catkin/libsbp-prefix/src/libsbp-build/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_ae250.dir/build.make CMakeFiles/cmTC_ae250.dir/build
+make[4]: Entering directory '/home/reu-actor/actor_ws/build/libsbp_catkin/libsbp-prefix/src/libsbp-build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_ae250.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=_strdup   -o CMakeFiles/cmTC_ae250.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_ae250
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ae250.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=_strdup    -rdynamic CMakeFiles/cmTC_ae250.dir/CheckFunctionExists.c.o  -o cmTC_ae250 
+/usr/bin/ld: CMakeFiles/cmTC_ae250.dir/CheckFunctionExists.c.o: in function `main':
+CheckFunctionExists.c:(.text+0x14): undefined reference to `_strdup'
+collect2: error: ld returned 1 exit status
+make[4]: *** [CMakeFiles/cmTC_ae250.dir/build.make:87: cmTC_ae250] Error 1
+make[4]: Leaving directory '/home/reu-actor/actor_ws/build/libsbp_catkin/libsbp-prefix/src/libsbp-build/CMakeFiles/CMakeTmp'
+make[3]: *** [Makefile:121: cmTC_ae250/fast] Error 2
+make[3]: Leaving directory '/home/reu-actor/actor_ws/build/libsbp_catkin/libsbp-prefix/src/libsbp-build/CMakeFiles/CMakeTmp'
+
+
+
+Performing C SOURCE FILE Test HAVE_STRUCT_ITIMERSPEC_IT_VALUE failed with the following output:
+Change Dir: /home/reu-actor/actor_ws/build/libsbp_catkin/libsbp-prefix/src/libsbp-build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_054c1/fast && make[3]: Entering directory '/home/reu-actor/actor_ws/build/libsbp_catkin/libsbp-prefix/src/libsbp-build/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_054c1.dir/build.make CMakeFiles/cmTC_054c1.dir/build
+make[4]: Entering directory '/home/reu-actor/actor_ws/build/libsbp_catkin/libsbp-prefix/src/libsbp-build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_054c1.dir/src.c.o
+/usr/bin/cc   -DHAVE_STRUCT_ITIMERSPEC_IT_VALUE   -o CMakeFiles/cmTC_054c1.dir/src.c.o   -c /home/reu-actor/actor_ws/build/libsbp_catkin/libsbp-prefix/src/libsbp-build/CMakeFiles/CMakeTmp/src.c
+/home/reu-actor/actor_ws/build/libsbp_catkin/libsbp-prefix/src/libsbp-build/CMakeFiles/CMakeTmp/src.c: In function ‘main’:
+/home/reu-actor/actor_ws/build/libsbp_catkin/libsbp-prefix/src/libsbp-build/CMakeFiles/CMakeTmp/src.c:6:29: error: storage size of ‘tmp’ isn’t known
+    6 |    static struct itimerspec tmp;
+      |                             ^~~
+make[4]: *** [CMakeFiles/cmTC_054c1.dir/build.make:66: CMakeFiles/cmTC_054c1.dir/src.c.o] Error 1
+make[4]: Leaving directory '/home/reu-actor/actor_ws/build/libsbp_catkin/libsbp-prefix/src/libsbp-build/CMakeFiles/CMakeTmp'
+make[3]: *** [Makefile:121: cmTC_054c1/fast] Error 2
+make[3]: Leaving directory '/home/reu-actor/actor_ws/build/libsbp_catkin/libsbp-prefix/src/libsbp-build/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+
+#include <sys/time.h>
+
+int main()
+{
+   static struct itimerspec tmp;
+   if (sizeof(tmp.it_value))
+      return 0;
+  return 0;
+}
+
+Determining size of __int64 failed with the following output:
+Change Dir: /home/reu-actor/actor_ws/build/libsbp_catkin/libsbp-prefix/src/libsbp-build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_28d6c/fast && make[3]: Entering directory '/home/reu-actor/actor_ws/build/libsbp_catkin/libsbp-prefix/src/libsbp-build/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_28d6c.dir/build.make CMakeFiles/cmTC_28d6c.dir/build
+make[4]: Entering directory '/home/reu-actor/actor_ws/build/libsbp_catkin/libsbp-prefix/src/libsbp-build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_28d6c.dir/__INT64.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_28d6c.dir/__INT64.c.o   -c /home/reu-actor/actor_ws/build/libsbp_catkin/libsbp-prefix/src/libsbp-build/CMakeFiles/CheckTypeSize/__INT64.c
+/home/reu-actor/actor_ws/build/libsbp_catkin/libsbp-prefix/src/libsbp-build/CMakeFiles/CheckTypeSize/__INT64.c:23:22: error: ‘__int64’ undeclared here (not in a function); did you mean ‘__int64_t’?
+   23 | #define SIZE (sizeof(__int64))
+      |                      ^~~~~~~
+/home/reu-actor/actor_ws/build/libsbp_catkin/libsbp-prefix/src/libsbp-build/CMakeFiles/CheckTypeSize/__INT64.c:25:12: note: in expansion of macro ‘SIZE’
+   25 |   ('0' + ((SIZE / 10000)%10)),
+      |            ^~~~
+make[4]: *** [CMakeFiles/cmTC_28d6c.dir/build.make:66: CMakeFiles/cmTC_28d6c.dir/__INT64.c.o] Error 1
+make[4]: Leaving directory '/home/reu-actor/actor_ws/build/libsbp_catkin/libsbp-prefix/src/libsbp-build/CMakeFiles/CMakeTmp'
+make[3]: *** [Makefile:121: cmTC_28d6c/fast] Error 2
+make[3]: Leaving directory '/home/reu-actor/actor_ws/build/libsbp_catkin/libsbp-prefix/src/libsbp-build/CMakeFiles/CMakeTmp'
+
+
+/home/reu-actor/actor_ws/build/libsbp_catkin/libsbp-prefix/src/libsbp-build/CMakeFiles/CheckTypeSize/__INT64.c:
+#include <sys/types.h>
+#include <stdint.h>
+#include <stddef.h>
+
+
+#undef KEY
+#if defined(__i386)
+# define KEY '_','_','i','3','8','6'
+#elif defined(__x86_64)
+# define KEY '_','_','x','8','6','_','6','4'
+#elif defined(__ppc__)
+# define KEY '_','_','p','p','c','_','_'
+#elif defined(__ppc64__)
+# define KEY '_','_','p','p','c','6','4','_','_'
+#elif defined(__aarch64__)
+# define KEY '_','_','a','a','r','c','h','6','4','_','_'
+#elif defined(__ARM_ARCH_7A__)
+# define KEY '_','_','A','R','M','_','A','R','C','H','_','7','A','_','_'
+#elif defined(__ARM_ARCH_7S__)
+# define KEY '_','_','A','R','M','_','A','R','C','H','_','7','S','_','_'
+#endif
+
+#define SIZE (sizeof(__int64))
+static char info_size[] =  {'I', 'N', 'F', 'O', ':', 's','i','z','e','[',
+  ('0' + ((SIZE / 10000)%10)),
+  ('0' + ((SIZE / 1000)%10)),
+  ('0' + ((SIZE / 100)%10)),
+  ('0' + ((SIZE / 10)%10)),
+  ('0' +  (SIZE    % 10)),
+  ']',
+#ifdef KEY
+  ' ','k','e','y','[', KEY, ']',
+#endif
+  '\0'};
+
+#ifdef __CLASSIC_C__
+int main(argc, argv) int argc; char *argv[];
+#else
+int main(int argc, char *argv[])
+#endif
+{
+  int require = 0;
+  require += info_size[argc];
+  (void)argv;
+  return require;
+}
+
+
+Determining size of unsigned __int64 failed with the following output:
+Change Dir: /home/reu-actor/actor_ws/build/libsbp_catkin/libsbp-prefix/src/libsbp-build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_bc320/fast && make[3]: Entering directory '/home/reu-actor/actor_ws/build/libsbp_catkin/libsbp-prefix/src/libsbp-build/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_bc320.dir/build.make CMakeFiles/cmTC_bc320.dir/build
+make[4]: Entering directory '/home/reu-actor/actor_ws/build/libsbp_catkin/libsbp-prefix/src/libsbp-build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_bc320.dir/UNSIGNED___INT64.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_bc320.dir/UNSIGNED___INT64.c.o   -c /home/reu-actor/actor_ws/build/libsbp_catkin/libsbp-prefix/src/libsbp-build/CMakeFiles/CheckTypeSize/UNSIGNED___INT64.c
+/home/reu-actor/actor_ws/build/libsbp_catkin/libsbp-prefix/src/libsbp-build/CMakeFiles/CheckTypeSize/UNSIGNED___INT64.c:23:31: error: expected ‘)’ before ‘__int64’
+   23 | #define SIZE (sizeof(unsigned __int64))
+      |                     ~         ^~~~~~~
+/home/reu-actor/actor_ws/build/libsbp_catkin/libsbp-prefix/src/libsbp-build/CMakeFiles/CheckTypeSize/UNSIGNED___INT64.c:25:12: note: in expansion of macro ‘SIZE’
+   25 |   ('0' + ((SIZE / 10000)%10)),
+      |            ^~~~
+/home/reu-actor/actor_ws/build/libsbp_catkin/libsbp-prefix/src/libsbp-build/CMakeFiles/CheckTypeSize/UNSIGNED___INT64.c:23:31: error: expected ‘)’ before ‘__int64’
+   23 | #define SIZE (sizeof(unsigned __int64))
+      |                     ~         ^~~~~~~
+/home/reu-actor/actor_ws/build/libsbp_catkin/libsbp-prefix/src/libsbp-build/CMakeFiles/CheckTypeSize/UNSIGNED___INT64.c:26:12: note: in expansion of macro ‘SIZE’
+   26 |   ('0' + ((SIZE / 1000)%10)),
+      |            ^~~~
+/home/reu-actor/actor_ws/build/libsbp_catkin/libsbp-prefix/src/libsbp-build/CMakeFiles/CheckTypeSize/UNSIGNED___INT64.c:23:31: error: expected ‘)’ before ‘__int64’
+   23 | #define SIZE (sizeof(unsigned __int64))
+      |                     ~         ^~~~~~~
+/home/reu-actor/actor_ws/build/libsbp_catkin/libsbp-prefix/src/libsbp-build/CMakeFiles/CheckTypeSize/UNSIGNED___INT64.c:27:12: note: in expansion of macro ‘SIZE’
+   27 |   ('0' + ((SIZE / 100)%10)),
+      |            ^~~~
+/home/reu-actor/actor_ws/build/libsbp_catkin/libsbp-prefix/src/libsbp-build/CMakeFiles/CheckTypeSize/UNSIGNED___INT64.c:23:31: error: expected ‘)’ before ‘__int64’
+   23 | #define SIZE (sizeof(unsigned __int64))
+      |                     ~         ^~~~~~~
+/home/reu-actor/actor_ws/build/libsbp_catkin/libsbp-prefix/src/libsbp-build/CMakeFiles/CheckTypeSize/UNSIGNED___INT64.c:28:12: note: in expansion of macro ‘SIZE’
+   28 |   ('0' + ((SIZE / 10)%10)),
+      |            ^~~~
+/home/reu-actor/actor_ws/build/libsbp_catkin/libsbp-prefix/src/libsbp-build/CMakeFiles/CheckTypeSize/UNSIGNED___INT64.c:23:31: error: expected ‘)’ before ‘__int64’
+   23 | #define SIZE (sizeof(unsigned __int64))
+      |                     ~         ^~~~~~~
+/home/reu-actor/actor_ws/build/libsbp_catkin/libsbp-prefix/src/libsbp-build/CMakeFiles/CheckTypeSize/UNSIGNED___INT64.c:29:12: note: in expansion of macro ‘SIZE’
+   29 |   ('0' +  (SIZE    % 10)),
+      |            ^~~~
+make[4]: *** [CMakeFiles/cmTC_bc320.dir/build.make:66: CMakeFiles/cmTC_bc320.dir/UNSIGNED___INT64.c.o] Error 1
+make[4]: Leaving directory '/home/reu-actor/actor_ws/build/libsbp_catkin/libsbp-prefix/src/libsbp-build/CMakeFiles/CMakeTmp'
+make[3]: *** [Makefile:121: cmTC_bc320/fast] Error 2
+make[3]: Leaving directory '/home/reu-actor/actor_ws/build/libsbp_catkin/libsbp-prefix/src/libsbp-build/CMakeFiles/CMakeTmp'
+
+
+/home/reu-actor/actor_ws/build/libsbp_catkin/libsbp-prefix/src/libsbp-build/CMakeFiles/CheckTypeSize/UNSIGNED___INT64.c:
+#include <sys/types.h>
+#include <stdint.h>
+#include <stddef.h>
+
+
+#undef KEY
+#if defined(__i386)
+# define KEY '_','_','i','3','8','6'
+#elif defined(__x86_64)
+# define KEY '_','_','x','8','6','_','6','4'
+#elif defined(__ppc__)
+# define KEY '_','_','p','p','c','_','_'
+#elif defined(__ppc64__)
+# define KEY '_','_','p','p','c','6','4','_','_'
+#elif defined(__aarch64__)
+# define KEY '_','_','a','a','r','c','h','6','4','_','_'
+#elif defined(__ARM_ARCH_7A__)
+# define KEY '_','_','A','R','M','_','A','R','C','H','_','7','A','_','_'
+#elif defined(__ARM_ARCH_7S__)
+# define KEY '_','_','A','R','M','_','A','R','C','H','_','7','S','_','_'
+#endif
+
+#define SIZE (sizeof(unsigned __int64))
+static char info_size[] =  {'I', 'N', 'F', 'O', ':', 's','i','z','e','[',
+  ('0' + ((SIZE / 10000)%10)),
+  ('0' + ((SIZE / 1000)%10)),
+  ('0' + ((SIZE / 100)%10)),
+  ('0' + ((SIZE / 10)%10)),
+  ('0' +  (SIZE    % 10)),
+  ']',
+#ifdef KEY
+  ' ','k','e','y','[', KEY, ']',
+#endif
+  '\0'};
+
+#ifdef __CLASSIC_C__
+int main(argc, argv) int argc; char *argv[];
+#else
+int main(int argc, char *argv[])
+#endif
+{
+  int require = 0;
+  require += info_size[argc];
+  (void)argv;
+  return require;
+}
+
+
+Determining if the function subunit_test_start exists in the subunit failed with the following output:
+Change Dir: /home/reu-actor/actor_ws/build/libsbp_catkin/libsbp-prefix/src/libsbp-build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_98097/fast && make[3]: Entering directory '/home/reu-actor/actor_ws/build/libsbp_catkin/libsbp-prefix/src/libsbp-build/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_98097.dir/build.make CMakeFiles/cmTC_98097.dir/build
+make[4]: Entering directory '/home/reu-actor/actor_ws/build/libsbp_catkin/libsbp-prefix/src/libsbp-build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_98097.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=subunit_test_start   -o CMakeFiles/cmTC_98097.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_98097
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_98097.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=subunit_test_start    -rdynamic CMakeFiles/cmTC_98097.dir/CheckFunctionExists.c.o  -o cmTC_98097  -lsubunit 
+/usr/bin/ld: cannot find -lsubunit
+collect2: error: ld returned 1 exit status
+make[4]: *** [CMakeFiles/cmTC_98097.dir/build.make:87: cmTC_98097] Error 1
+make[4]: Leaving directory '/home/reu-actor/actor_ws/build/libsbp_catkin/libsbp-prefix/src/libsbp-build/CMakeFiles/CMakeTmp'
+make[3]: *** [Makefile:121: cmTC_98097/fast] Error 2
+make[3]: Leaving directory '/home/reu-actor/actor_ws/build/libsbp_catkin/libsbp-prefix/src/libsbp-build/CMakeFiles/CMakeTmp'
+
+
+
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /home/reu-actor/actor_ws/build/libsbp_catkin/libsbp-prefix/src/libsbp-build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_39c2c/fast && make[3]: Entering directory '/home/reu-actor/actor_ws/build/libsbp_catkin/libsbp-prefix/src/libsbp-build/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_39c2c.dir/build.make CMakeFiles/cmTC_39c2c.dir/build
+make[4]: Entering directory '/home/reu-actor/actor_ws/build/libsbp_catkin/libsbp-prefix/src/libsbp-build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_39c2c.dir/src.c.o
+/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_39c2c.dir/src.c.o   -c /home/reu-actor/actor_ws/build/libsbp_catkin/libsbp-prefix/src/libsbp-build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_39c2c
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_39c2c.dir/link.txt --verbose=1
+/usr/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD    -rdynamic CMakeFiles/cmTC_39c2c.dir/src.c.o  -o cmTC_39c2c 
+/usr/bin/ld: CMakeFiles/cmTC_39c2c.dir/src.c.o: in function `main':
+src.c:(.text+0x46): undefined reference to `pthread_create'
+/usr/bin/ld: src.c:(.text+0x52): undefined reference to `pthread_detach'
+/usr/bin/ld: src.c:(.text+0x63): undefined reference to `pthread_join'
+collect2: error: ld returned 1 exit status
+make[4]: *** [CMakeFiles/cmTC_39c2c.dir/build.make:87: cmTC_39c2c] Error 1
+make[4]: Leaving directory '/home/reu-actor/actor_ws/build/libsbp_catkin/libsbp-prefix/src/libsbp-build/CMakeFiles/CMakeTmp'
+make[3]: *** [Makefile:121: cmTC_39c2c/fast] Error 2
+make[3]: Leaving directory '/home/reu-actor/actor_ws/build/libsbp_catkin/libsbp-prefix/src/libsbp-build/CMakeFiles/CMakeTmp'
+
+
+Source file was:
+#include <pthread.h>
+
+void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/reu-actor/actor_ws/build/libsbp_catkin/libsbp-prefix/src/libsbp-build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_f47f8/fast && make[3]: Entering directory '/home/reu-actor/actor_ws/build/libsbp_catkin/libsbp-prefix/src/libsbp-build/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTC_f47f8.dir/build.make CMakeFiles/cmTC_f47f8.dir/build
+make[4]: Entering directory '/home/reu-actor/actor_ws/build/libsbp_catkin/libsbp-prefix/src/libsbp-build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_f47f8.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_f47f8.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_f47f8
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f47f8.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_f47f8.dir/CheckFunctionExists.c.o  -o cmTC_f47f8  -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+make[4]: *** [CMakeFiles/cmTC_f47f8.dir/build.make:87: cmTC_f47f8] Error 1
+make[4]: Leaving directory '/home/reu-actor/actor_ws/build/libsbp_catkin/libsbp-prefix/src/libsbp-build/CMakeFiles/CMakeTmp'
+make[3]: *** [Makefile:121: cmTC_f47f8/fast] Error 2
+make[3]: Leaving directory '/home/reu-actor/actor_ws/build/libsbp_catkin/libsbp-prefix/src/libsbp-build/CMakeFiles/CMakeTmp'
+
+
+

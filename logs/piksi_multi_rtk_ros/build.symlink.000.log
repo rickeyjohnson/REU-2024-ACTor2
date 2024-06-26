@@ -1,0 +1,9 @@
+Symlinking /home/reu-actor/actor_ws/devel/lib/pkgconfig/piksi_multi_rtk_ros.pc
+Symlinking /home/reu-actor/actor_ws/devel/lib/python3/dist-packages/piksi_multi_rtk_ros/__init__.py
+Symlinking /home/reu-actor/actor_ws/devel/lib/piksi_multi_rtk_ros/geodetic_survey
+Symlinking /home/reu-actor/actor_ws/devel/lib/piksi_multi_rtk_ros/cmake.lock
+Symlinking /home/reu-actor/actor_ws/devel/lib/piksi_multi_rtk_ros/piksi_multi
+Symlinking /home/reu-actor/actor_ws/devel/bin/geodetic_survey
+Symlinking /home/reu-actor/actor_ws/devel/bin/piksi_multi
+Symlinking /home/reu-actor/actor_ws/devel/share/piksi_multi_rtk_ros/cmake/piksi_multi_rtk_rosConfig-version.cmake
+Symlinking /home/reu-actor/actor_ws/devel/share/piksi_multi_rtk_ros/cmake/piksi_multi_rtk_rosConfig.cmake

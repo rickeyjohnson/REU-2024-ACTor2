@@ -1,21 +1,21 @@
 Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
 Change Dir: /home/reu-actor/actor_ws/build/simple_camera_publisher/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_4ba33/fast && /usr/bin/make -f CMakeFiles/cmTC_4ba33.dir/build.make CMakeFiles/cmTC_4ba33.dir/build
+Run Build Command(s):/usr/bin/make cmTC_65444/fast && /usr/bin/make -f CMakeFiles/cmTC_65444.dir/build.make CMakeFiles/cmTC_65444.dir/build
 make[1]: Entering directory '/home/reu-actor/actor_ws/build/simple_camera_publisher/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_4ba33.dir/src.c.o
-/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_4ba33.dir/src.c.o   -c /home/reu-actor/actor_ws/build/simple_camera_publisher/CMakeFiles/CMakeTmp/src.c
-Linking C executable cmTC_4ba33
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4ba33.dir/link.txt --verbose=1
-/usr/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD    -rdynamic CMakeFiles/cmTC_4ba33.dir/src.c.o  -o cmTC_4ba33 
-/usr/bin/ld: CMakeFiles/cmTC_4ba33.dir/src.c.o: in function `main':
+Building C object CMakeFiles/cmTC_65444.dir/src.c.o
+/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_65444.dir/src.c.o   -c /home/reu-actor/actor_ws/build/simple_camera_publisher/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_65444
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_65444.dir/link.txt --verbose=1
+/usr/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD    -rdynamic CMakeFiles/cmTC_65444.dir/src.c.o  -o cmTC_65444 
+/usr/bin/ld: CMakeFiles/cmTC_65444.dir/src.c.o: in function `main':
 src.c:(.text+0x46): undefined reference to `pthread_create'
 /usr/bin/ld: src.c:(.text+0x52): undefined reference to `pthread_detach'
 /usr/bin/ld: src.c:(.text+0x63): undefined reference to `pthread_join'
 collect2: error: ld returned 1 exit status
-make[1]: *** [CMakeFiles/cmTC_4ba33.dir/build.make:87: cmTC_4ba33] Error 1
+make[1]: *** [CMakeFiles/cmTC_65444.dir/build.make:87: cmTC_65444] Error 1
 make[1]: Leaving directory '/home/reu-actor/actor_ws/build/simple_camera_publisher/CMakeFiles/CMakeTmp'
-make: *** [Makefile:121: cmTC_4ba33/fast] Error 2
+make: *** [Makefile:121: cmTC_65444/fast] Error 2
 
 
 Source file was:
@@ -41,18 +41,18 @@ int main(void)
 Determining if the function pthread_create exists in the pthreads failed with the following output:
 Change Dir: /home/reu-actor/actor_ws/build/simple_camera_publisher/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_3b517/fast && /usr/bin/make -f CMakeFiles/cmTC_3b517.dir/build.make CMakeFiles/cmTC_3b517.dir/build
+Run Build Command(s):/usr/bin/make cmTC_cc028/fast && /usr/bin/make -f CMakeFiles/cmTC_cc028.dir/build.make CMakeFiles/cmTC_cc028.dir/build
 make[1]: Entering directory '/home/reu-actor/actor_ws/build/simple_camera_publisher/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_3b517.dir/CheckFunctionExists.c.o
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_3b517.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
-Linking C executable cmTC_3b517
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3b517.dir/link.txt --verbose=1
-/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_3b517.dir/CheckFunctionExists.c.o  -o cmTC_3b517  -lpthreads 
+Building C object CMakeFiles/cmTC_cc028.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_cc028.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_cc028
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_cc028.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_cc028.dir/CheckFunctionExists.c.o  -o cmTC_cc028  -lpthreads 
 /usr/bin/ld: cannot find -lpthreads
 collect2: error: ld returned 1 exit status
-make[1]: *** [CMakeFiles/cmTC_3b517.dir/build.make:87: cmTC_3b517] Error 1
+make[1]: *** [CMakeFiles/cmTC_cc028.dir/build.make:87: cmTC_cc028] Error 1
 make[1]: Leaving directory '/home/reu-actor/actor_ws/build/simple_camera_publisher/CMakeFiles/CMakeTmp'
-make: *** [Makefile:121: cmTC_3b517/fast] Error 2
+make: *** [Makefile:121: cmTC_cc028/fast] Error 2
 
 
 

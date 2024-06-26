@@ -1,0 +1,543 @@
+[35m[1mScanning dependencies of target libsbp[0m
+[ 12%] [34m[1mCreating directories for 'libsbp'[0m
+[ 25%] [34m[1mPerforming download step (git clone) for 'libsbp'[0m
+Cloning into 'libsbp'...
+Note: switching to 'v2.7.4'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+HEAD is now at dfc65520 update PDF
+Submodule 'c/cmake/common' (https://github.com/swift-nav/cmake.git) registered for path 'c/cmake/common'
+Submodule 'c/third_party/check' (https://github.com/swift-nav/check.git) registered for path 'c/third_party/check'
+Cloning into '/home/reu-actor/actor_ws/build/libsbp_catkin/libsbp-prefix/src/libsbp/c/cmake/common'...
+Cloning into '/home/reu-actor/actor_ws/build/libsbp_catkin/libsbp-prefix/src/libsbp/c/third_party/check'...
+Submodule path 'c/cmake/common': checked out 'fd8c86b87d2b18261691ef8db1f6fd9906911b82'
+Submodule path 'c/third_party/check': checked out 'ae60b244bc6c76047407ec3eb5822151d32524d4'
+[ 37%] [34m[1mPerforming update step for 'libsbp'[0m
+[ 50%] [34m[1mPerforming patch step for 'libsbp'[0m
+patching file generator/sbpg/specs/yaml2.py
+[ 62%] [34m[1mPerforming configure step for 'libsbp'[0m
+-- The C compiler identification is GNU 9.4.0
+-- The CXX compiler identification is GNU 9.4.0
+-- Check for working C compiler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Check for working CXX compiler: /usr/bin/c++
+-- Check for working CXX compiler: /usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found check source code in /home/reu-actor/actor_ws/build/libsbp_catkin/libsbp-prefix/src/libsbp/c/third_party/check
+-- Looking for include file sys/types.h
+-- Looking for include file sys/types.h - found
+-- Looking for include files sys/types.h, errno.h
+-- Looking for include files sys/types.h, errno.h - found
+-- Looking for 3 include files sys/types.h, ..., inttypes.h
+-- Looking for 3 include files sys/types.h, ..., inttypes.h - found
+-- Looking for 4 include files sys/types.h, ..., limits.h
+-- Looking for 4 include files sys/types.h, ..., limits.h - found
+-- Looking for 5 include files sys/types.h, ..., regex.h
+-- Looking for 5 include files sys/types.h, ..., regex.h - found
+-- Looking for 6 include files sys/types.h, ..., signal.h
+-- Looking for 6 include files sys/types.h, ..., signal.h - found
+-- Looking for 7 include files sys/types.h, ..., stdarg.h
+-- Looking for 7 include files sys/types.h, ..., stdarg.h - found
+-- Looking for 8 include files sys/types.h, ..., stdint.h
+-- Looking for 8 include files sys/types.h, ..., stdint.h - found
+-- Looking for 9 include files sys/types.h, ..., stdlib.h
+-- Looking for 9 include files sys/types.h, ..., stdlib.h - found
+-- Looking for 10 include files sys/types.h, ..., string.h
+-- Looking for 10 include files sys/types.h, ..., string.h - found
+-- Looking for 11 include files sys/types.h, ..., strings.h
+-- Looking for 11 include files sys/types.h, ..., strings.h - found
+-- Looking for 12 include files sys/types.h, ..., sys/time.h
+-- Looking for 12 include files sys/types.h, ..., sys/time.h - found
+-- Looking for 13 include files sys/types.h, ..., time.h
+-- Looking for 13 include files sys/types.h, ..., time.h - found
+-- Looking for fork
+-- Looking for fork - found
+-- Looking for getline
+-- Looking for getline - found
+-- Looking for getpid
+-- Looking for getpid - found
+-- Looking for gettimeofday
+-- Looking for gettimeofday - found
+-- Looking for localtime_r
+-- Looking for localtime_r - found
+-- Looking for malloc
+-- Looking for malloc - found
+-- Looking for mkstemp
+-- Looking for mkstemp - found
+-- Looking for realloc
+-- Looking for realloc - found
+-- Looking for setenv
+-- Looking for setenv - found
+-- Looking for sigaction
+-- Looking for sigaction - found
+-- Looking for strdup
+-- Looking for strdup - found
+-- Looking for strsignal
+-- Looking for strsignal - found
+-- Looking for _getpid
+-- Looking for _getpid - not found
+-- Looking for _strdup
+-- Looking for _strdup - not found
+-- Looking for regcomp
+-- Looking for regcomp - found
+-- Looking for regexec
+-- Looking for regexec - found
+-- Looking for snprintf
+-- Looking for snprintf - found
+-- Looking for vsnprintf
+-- Looking for vsnprintf - found
+-- Looking for snprintf
+-- Looking for snprintf - found
+-- Looking for vsnprintf
+-- Looking for vsnprintf - found
+-- Looking for INT64_MAX
+-- Looking for INT64_MAX - found
+-- Looking for INT64_MIN
+-- Looking for INT64_MIN - found
+-- Looking for UINT32_MAX
+-- Looking for UINT32_MAX - found
+-- Looking for UINT64_MAX
+-- Looking for UINT64_MAX - found
+-- Looking for SIZE_MAX
+-- Looking for SIZE_MAX - found
+-- Looking for SSIZE_MAX
+-- Looking for SSIZE_MAX - found
+-- Performing Test HAVE_STRUCT_ITIMERSPEC_IT_VALUE
+-- Performing Test HAVE_STRUCT_ITIMERSPEC_IT_VALUE - Failed
+-- Looking for stddef.h
+-- Looking for stddef.h - found
+-- Check size of short
+-- Check size of short - done
+-- Check size of int
+-- Check size of int - done
+-- Check size of long
+-- Check size of long - done
+-- Check size of long long
+-- Check size of long long - done
+-- Check size of unsigned short
+-- Check size of unsigned short - done
+-- Check size of unsigned
+-- Check size of unsigned - done
+-- Check size of unsigned long
+-- Check size of unsigned long - done
+-- Check size of unsigned long long
+-- Check size of unsigned long long - done
+-- Check size of __int64
+-- Check size of __int64 - failed
+-- Check size of unsigned __int64
+-- Check size of unsigned __int64 - failed
+-- Check size of int16_t
+-- Check size of int16_t - done
+-- Check size of int32_t
+-- Check size of int32_t - done
+-- Check size of int64_t
+-- Check size of int64_t - done
+-- Check size of intmax_t
+-- Check size of intmax_t - done
+-- Check size of uint8_t
+-- Check size of uint8_t - done
+-- Check size of uint16_t
+-- Check size of uint16_t - done
+-- Check size of uint32_t
+-- Check size of uint32_t - done
+-- Check size of uint64_t
+-- Check size of uint64_t - done
+-- Check size of uintmax_t
+-- Check size of uintmax_t - done
+-- Check size of clock_t
+-- Check size of clock_t - done
+-- Check size of clockid_t
+-- Check size of clockid_t - done
+-- Check size of size_t
+-- Check size of size_t - done
+-- Check size of ssize_t
+-- Check size of ssize_t - done
+-- Check size of pid_t
+-- Check size of pid_t - done
+-- Check size of timer_t
+-- Check size of timer_t - done
+-- Looking for floor in m
+-- Looking for floor in m - found
+-- Looking for clock_gettime in rt
+-- Looking for clock_gettime in rt - found
+-- Looking for subunit_test_start in subunit
+-- Looking for subunit_test_start in subunit - not found
+-- Using dependency check from bundled source code
+-- Marking check include directories as system
+-- Could NOT find Doxygen (missing: DOXYGEN_EXECUTABLE) 
+CMake Warning at docs/CMakeLists.txt:7 (message):
+  Doxygen not found, the documentation will not be built.
+
+
+-- Looking for pthread.h
+-- Looking for pthread.h - found
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
+-- Looking for pthread_create in pthreads
+-- Looking for pthread_create in pthreads - not found
+-- Looking for pthread_create in pthread
+-- Looking for pthread_create in pthread - found
+-- Found Threads: TRUE  
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/reu-actor/actor_ws/build/libsbp_catkin/libsbp-prefix/src/libsbp-build
+[ 75%] [34m[1mPerforming build step for 'libsbp'[0m
+[35m[1mScanning dependencies of target compat[0m
+[35m[1mScanning dependencies of target sbp[0m
+[  1%] [32mBuilding C object third_party/check/lib/CMakeFiles/compat.dir/libcompat.c.o[0m
+[  2%] [32mBuilding C object third_party/check/lib/CMakeFiles/compat.dir/fpclassify.c.o[0m
+[  3%] [32mBuilding C object src/CMakeFiles/sbp.dir/sbp.c.o[0m
+[  3%] [32mBuilding C object src/CMakeFiles/sbp.dir/edc.c.o[0m
+[  3%] [32m[1mLinking C static library libcompat.a[0m
+[  4%] [32m[1mLinking C shared library libsbp.so[0m
+[  4%] Built target compat
+[  4%] Built target sbp
+[35m[1mScanning dependencies of target check[0m
+[  5%] [32mBuilding C object third_party/check/src/CMakeFiles/check.dir/check_list.c.o[0m
+[  5%] [32mBuilding C object third_party/check/src/CMakeFiles/check.dir/check_log.c.o[0m
+[  7%] [32mBuilding C object third_party/check/src/CMakeFiles/check.dir/check_error.c.o[0m
+[  7%] [32mBuilding C object third_party/check/src/CMakeFiles/check.dir/check.c.o[0m
+[  7%] [32mBuilding C object third_party/check/src/CMakeFiles/check.dir/check_pack.c.o[0m
+[  8%] [32mBuilding C object third_party/check/src/CMakeFiles/check.dir/check_msg.c.o[0m
+[  9%] [32mBuilding C object third_party/check/src/CMakeFiles/check.dir/check_str.c.o[0m
+[  9%] [32mBuilding C object third_party/check/src/CMakeFiles/check.dir/check_print.c.o[0m
+[ 10%] [32mBuilding C object third_party/check/src/CMakeFiles/check.dir/check_run.c.o[0m
+[01m[K/home/reu-actor/actor_ws/build/libsbp_catkin/libsbp-prefix/src/libsbp/c/third_party/check/src/check.c:[m[K In function ‘[01m[K_ck_assert_failed[m[K’:
+[01m[K/home/reu-actor/actor_ws/build/libsbp_catkin/libsbp-prefix/src/libsbp/c/third_party/check/src/check.c:393:9:[m[K [01;35m[Kwarning: [m[Kimplicit declaration of function ‘[01m[K_exit[m[K’ [[01;35m[K-Wimplicit-function-declaration[m[K]
+  393 |         [01;35m[K_exit[m[K(1);
+      |         [01;35m[K^~~~~[m[K
+[01m[K/home/reu-actor/actor_ws/build/libsbp_catkin/libsbp-prefix/src/libsbp/c/third_party/check/src/check.c:393:9:[m[K [01;35m[Kwarning: [m[Kincompatible implicit declaration of built-in function ‘[01m[K_exit[m[K’
+[01m[K/home/reu-actor/actor_ws/build/libsbp_catkin/libsbp-prefix/src/libsbp/c/third_party/check/src/check_msg.c:[m[K In function ‘[01m[Kopen_tmp_file[m[K’:
+[01m[K/home/reu-actor/actor_ws/build/libsbp_catkin/libsbp-prefix/src/libsbp/c/third_party/check/src/check_msg.c:303:18:[m[K [01;35m[Kwarning: [m[Kimplicit declaration of function ‘[01m[Kunlink[m[K’ [[01;35m[K-Wimplicit-function-declaration[m[K]
+  303 |         if (0 == [01;35m[Kunlink[m[K (*name) || NULL == file)
+      |                  [01;35m[K^~~~~~[m[K
+[01m[K/home/reu-actor/actor_ws/build/libsbp_catkin/libsbp-prefix/src/libsbp/c/third_party/check/src/check_run.c:[m[K In function ‘[01m[Ksig_handler[m[K’:
+[01m[K/home/reu-actor/actor_ws/build/libsbp_catkin/libsbp-prefix/src/libsbp/c/third_party/check/src/check_run.c:133:29:[m[K [01;35m[Kwarning: [m[Kimplicit declaration of function ‘[01m[Kgetpgrp[m[K’ [[01;35m[K-Wimplicit-function-declaration[m[K]
+  133 |             own_group_pid = [01;35m[Kgetpgrp[m[K();
+      |                             [01;35m[K^~~~~~~[m[K
+[01m[K/home/reu-actor/actor_ws/build/libsbp_catkin/libsbp-prefix/src/libsbp/c/third_party/check/src/check_run.c:[m[K In function ‘[01m[Ktcase_run_tfun_fork[m[K’:
+[01m[K/home/reu-actor/actor_ws/build/libsbp_catkin/libsbp-prefix/src/libsbp/c/third_party/check/src/check_run.c:484:11:[m[K [01;35m[Kwarning: [m[Kimplicit declaration of function ‘[01m[Kfork[m[K’ [[01;35m[K-Wimplicit-function-declaration[m[K]
+  484 |     pid = [01;35m[Kfork[m[K();
+      |           [01;35m[K^~~~[m[K
+[01m[K/home/reu-actor/actor_ws/build/libsbp_catkin/libsbp-prefix/src/libsbp/c/third_party/check/src/check_run.c:489:9:[m[K [01;35m[Kwarning: [m[Kimplicit declaration of function ‘[01m[Ksetpgid[m[K’ [[01;35m[K-Wimplicit-function-declaration[m[K]
+  489 |         [01;35m[Ksetpgid[m[K(0, 0);
+      |         [01;35m[K^~~~~~~[m[K
+[01m[K/home/reu-actor/actor_ws/build/libsbp_catkin/libsbp-prefix/src/libsbp/c/third_party/check/src/check_run.c:519:25:[m[K [01;35m[Kwarning: [m[Kimplicit declaration of function ‘[01m[Kwaitpid[m[K’ [[01;35m[K-Wimplicit-function-declaration[m[K]
+  519 |                 pid_w = [01;35m[Kwaitpid[m[K(pid, &status, 0);
+      |                         [01;35m[K^~~~~~~[m[K
+[ 10%] [32m[1mLinking C static library libcheck.a[0m
+[ 10%] Built target check
+[35m[1mScanning dependencies of target test-libsbp[0m
+[ 10%] [32mBuilding C object test/CMakeFiles/test-libsbp.dir/check_main.c.o[0m
+[ 11%] [32mBuilding C object test/CMakeFiles/test-libsbp.dir/check_sbp.c.o[0m
+[ 13%] [32mBuilding C object test/CMakeFiles/test-libsbp.dir/check_edc.c.o[0m
+[ 13%] [32mBuilding C object test/CMakeFiles/test-libsbp.dir/auto_check_sbp_acquisition_31.c.o[0m
+[ 13%] [32mBuilding C object test/CMakeFiles/test-libsbp.dir/auto_check_sbp_acquisition_2.c.o[0m
+[ 14%] [32mBuilding C object test/CMakeFiles/test-libsbp.dir/auto_check_sbp_acquisition_30.c.o[0m
+[ 15%] [32mBuilding C object test/CMakeFiles/test-libsbp.dir/auto_check_sbp_acquisition_35.c.o[0m
+[ 15%] [32mBuilding C object test/CMakeFiles/test-libsbp.dir/auto_check_sbp_acquisition_1.c.o[0m
+[ 16%] [32mBuilding C object test/CMakeFiles/test-libsbp.dir/auto_check_sbp_acquisition_36.c.o[0m
+[ 15%] [32mBuilding C object test/CMakeFiles/test-libsbp.dir/auto_check_sbp_acquisition_38.c.o[0m
+[ 17%] [32mBuilding C object test/CMakeFiles/test-libsbp.dir/auto_check_sbp_acquisition_39.c.o[0m
+[ 17%] [32mBuilding C object test/CMakeFiles/test-libsbp.dir/auto_check_sbp_bootload_32.c.o[0m
+[ 19%] [32mBuilding C object test/CMakeFiles/test-libsbp.dir/auto_check_sbp_bootload_31.c.o[0m
+[ 19%] [32mBuilding C object test/CMakeFiles/test-libsbp.dir/auto_check_sbp_bootload_36.c.o[0m
+[ 20%] [32mBuilding C object test/CMakeFiles/test-libsbp.dir/auto_check_sbp_bootload_37.c.o[0m
+[ 20%] [32mBuilding C object test/CMakeFiles/test-libsbp.dir/auto_check_sbp_bootload_39.c.o[0m
+[ 21%] [32mBuilding C object test/CMakeFiles/test-libsbp.dir/auto_check_sbp_bootload_40.c.o[0m
+[ 22%] [32mBuilding C object test/CMakeFiles/test-libsbp.dir/auto_check_sbp_ext_events_32.c.o[0m
+[ 23%] [32mBuilding C object test/CMakeFiles/test-libsbp.dir/auto_check_sbp_ext_events_38.c.o[0m
+[ 24%] [32mBuilding C object test/CMakeFiles/test-libsbp.dir/auto_check_sbp_ext_events_37.c.o[0m
+[ 24%] [32mBuilding C object test/CMakeFiles/test-libsbp.dir/auto_check_sbp_ext_events_33.c.o[0m
+[ 24%] [32mBuilding C object test/CMakeFiles/test-libsbp.dir/auto_check_sbp_ext_events_40.c.o[0m
+[ 25%] [32mBuilding C object test/CMakeFiles/test-libsbp.dir/auto_check_sbp_logging_33.c.o[0m
+[ 26%] [32mBuilding C object test/CMakeFiles/test-libsbp.dir/auto_check_sbp_ext_events_41.c.o[0m
+[ 26%] [32mBuilding C object test/CMakeFiles/test-libsbp.dir/auto_check_sbp_logging_34.c.o[0m
+[ 27%] [32mBuilding C object test/CMakeFiles/test-libsbp.dir/auto_check_sbp_logging_35.c.o[0m
+[ 28%] [32mBuilding C object test/CMakeFiles/test-libsbp.dir/auto_check_sbp_logging_38.c.o[0m
+[ 28%] [32mBuilding C object test/CMakeFiles/test-libsbp.dir/auto_check_sbp_logging_39.c.o[0m
+[ 29%] [32mBuilding C object test/CMakeFiles/test-libsbp.dir/auto_check_sbp_logging_40.c.o[0m
+[ 29%] [32mBuilding C object test/CMakeFiles/test-libsbp.dir/auto_check_sbp_logging_42.c.o[0m
+[ 30%] [32mBuilding C object test/CMakeFiles/test-libsbp.dir/auto_check_sbp_logging_41.c.o[0m
+[ 31%] [32mBuilding C object test/CMakeFiles/test-libsbp.dir/auto_check_sbp_navigation_10.c.o[0m
+[ 32%] [32mBuilding C object test/CMakeFiles/test-libsbp.dir/auto_check_sbp_logging_43.c.o[0m
+[ 32%] [32mBuilding C object test/CMakeFiles/test-libsbp.dir/auto_check_sbp_navigation_11.c.o[0m
+[ 33%] [32mBuilding C object test/CMakeFiles/test-libsbp.dir/auto_check_sbp_navigation_14.c.o[0m
+[ 33%] [32mBuilding C object test/CMakeFiles/test-libsbp.dir/auto_check_sbp_navigation_15.c.o[0m
+[ 34%] [32mBuilding C object test/CMakeFiles/test-libsbp.dir/auto_check_sbp_navigation_12.c.o[0m
+[ 35%] [32mBuilding C object test/CMakeFiles/test-libsbp.dir/auto_check_sbp_navigation_13.c.o[0m
+[ 36%] [32mBuilding C object test/CMakeFiles/test-libsbp.dir/auto_check_sbp_navigation_16.c.o[0m
+[ 36%] [32mBuilding C object test/CMakeFiles/test-libsbp.dir/auto_check_sbp_navigation_17.c.o[0m
+[ 37%] [32mBuilding C object test/CMakeFiles/test-libsbp.dir/auto_check_sbp_navigation_19.c.o[0m
+[ 38%] [32mBuilding C object test/CMakeFiles/test-libsbp.dir/auto_check_sbp_navigation_18.c.o[0m
+[ 39%] [32mBuilding C object test/CMakeFiles/test-libsbp.dir/auto_check_sbp_navigation_21.c.o[0m
+[ 39%] [32mBuilding C object test/CMakeFiles/test-libsbp.dir/auto_check_sbp_navigation_20.c.o[0m
+[ 40%] [32mBuilding C object test/CMakeFiles/test-libsbp.dir/auto_check_sbp_navigation_22.c.o[0m
+[ 40%] [32mBuilding C object test/CMakeFiles/test-libsbp.dir/auto_check_sbp_navigation_23.c.o[0m
+[ 41%] [32mBuilding C object test/CMakeFiles/test-libsbp.dir/auto_check_sbp_navigation_3.c.o[0m
+[ 42%] [32mBuilding C object test/CMakeFiles/test-libsbp.dir/auto_check_sbp_navigation_24.c.o[0m
+[ 42%] [32mBuilding C object test/CMakeFiles/test-libsbp.dir/auto_check_sbp_navigation_35.c.o[0m
+[ 43%] [32mBuilding C object test/CMakeFiles/test-libsbp.dir/auto_check_sbp_navigation_36.c.o[0m
+[ 43%] [32mBuilding C object test/CMakeFiles/test-libsbp.dir/auto_check_sbp_navigation_40.c.o[0m
+[ 44%] [32mBuilding C object test/CMakeFiles/test-libsbp.dir/auto_check_sbp_navigation_4.c.o[0m
+[ 45%] [32mBuilding C object test/CMakeFiles/test-libsbp.dir/auto_check_sbp_navigation_41.c.o[0m
+[ 46%] [32mBuilding C object test/CMakeFiles/test-libsbp.dir/auto_check_sbp_navigation_43.c.o[0m
+[ 47%] [32mBuilding C object test/CMakeFiles/test-libsbp.dir/auto_check_sbp_navigation_5.c.o[0m
+[ 47%] [32mBuilding C object test/CMakeFiles/test-libsbp.dir/auto_check_sbp_navigation_44.c.o[0m
+[ 48%] [32mBuilding C object test/CMakeFiles/test-libsbp.dir/auto_check_sbp_navigation_6.c.o[0m
+[ 49%] [32mBuilding C object test/CMakeFiles/test-libsbp.dir/auto_check_sbp_navigation_7.c.o[0m
+[ 49%] [32mBuilding C object test/CMakeFiles/test-libsbp.dir/auto_check_sbp_navigation_8.c.o[0m
+[ 50%] [32mBuilding C object test/CMakeFiles/test-libsbp.dir/auto_check_sbp_observation_20.c.o[0m
+[ 50%] [32mBuilding C object test/CMakeFiles/test-libsbp.dir/auto_check_sbp_observation_21.c.o[0m
+[ 51%] [32mBuilding C object test/CMakeFiles/test-libsbp.dir/auto_check_sbp_navigation_9.c.o[0m
+[ 52%] [32mBuilding C object test/CMakeFiles/test-libsbp.dir/auto_check_sbp_observation_22.c.o[0m
+[ 53%] [32mBuilding C object test/CMakeFiles/test-libsbp.dir/auto_check_sbp_observation_25.c.o[0m
+[ 53%] [32mBuilding C object test/CMakeFiles/test-libsbp.dir/auto_check_sbp_observation_26.c.o[0m
+[ 54%] [32mBuilding C object test/CMakeFiles/test-libsbp.dir/auto_check_sbp_observation_27.c.o[0m
+[ 55%] [32mBuilding C object test/CMakeFiles/test-libsbp.dir/auto_check_sbp_observation_36.c.o[0m
+[ 55%] [32mBuilding C object test/CMakeFiles/test-libsbp.dir/auto_check_sbp_observation_37.c.o[0m
+[ 56%] [32mBuilding C object test/CMakeFiles/test-libsbp.dir/auto_check_sbp_observation_41.c.o[0m
+[ 57%] [32mBuilding C object test/CMakeFiles/test-libsbp.dir/auto_check_sbp_observation_42.c.o[0m
+[ 57%] [32mBuilding C object test/CMakeFiles/test-libsbp.dir/auto_check_sbp_observation_44.c.o[0m
+[ 58%] [32mBuilding C object test/CMakeFiles/test-libsbp.dir/auto_check_sbp_observation_45.c.o[0m
+[ 59%] [32mBuilding C object test/CMakeFiles/test-libsbp.dir/auto_check_sbp_orientation_27.c.o[0m
+[ 59%] [32mBuilding C object test/CMakeFiles/test-libsbp.dir/auto_check_sbp_orientation_28.c.o[0m
+[ 60%] [32mBuilding C object test/CMakeFiles/test-libsbp.dir/auto_check_sbp_orientation_29.c.o[0m
+[ 61%] [32mBuilding C object test/CMakeFiles/test-libsbp.dir/auto_check_sbp_piksi_22.c.o[0m
+[ 61%] [32mBuilding C object test/CMakeFiles/test-libsbp.dir/auto_check_sbp_piksi_23.c.o[0m
+[ 62%] [32mBuilding C object test/CMakeFiles/test-libsbp.dir/auto_check_sbp_piksi_24.c.o[0m
+[ 63%] [32mBuilding C object test/CMakeFiles/test-libsbp.dir/auto_check_sbp_piksi_25.c.o[0m
+[ 63%] [32mBuilding C object test/CMakeFiles/test-libsbp.dir/auto_check_sbp_piksi_27.c.o[0m
+[ 64%] [32mBuilding C object test/CMakeFiles/test-libsbp.dir/auto_check_sbp_piksi_29.c.o[0m
+[ 65%] [32mBuilding C object test/CMakeFiles/test-libsbp.dir/auto_check_sbp_piksi_28.c.o[0m
+[ 65%] [32mBuilding C object test/CMakeFiles/test-libsbp.dir/auto_check_sbp_piksi_30.c.o[0m
+[ 66%] [32mBuilding C object test/CMakeFiles/test-libsbp.dir/auto_check_sbp_piksi_31.c.o[0m
+[ 67%] [32mBuilding C object test/CMakeFiles/test-libsbp.dir/auto_check_sbp_piksi_32.c.o[0m
+[ 68%] [32mBuilding C object test/CMakeFiles/test-libsbp.dir/auto_check_sbp_piksi_37.c.o[0m
+[ 68%] [32mBuilding C object test/CMakeFiles/test-libsbp.dir/auto_check_sbp_piksi_33.c.o[0m
+[ 69%] [32mBuilding C object test/CMakeFiles/test-libsbp.dir/auto_check_sbp_piksi_38.c.o[0m
+[ 69%] [32mBuilding C object test/CMakeFiles/test-libsbp.dir/auto_check_sbp_piksi_42.c.o[0m
+[ 70%] [32mBuilding C object test/CMakeFiles/test-libsbp.dir/auto_check_sbp_piksi_43.c.o[0m
+[ 71%] [32mBuilding C object test/CMakeFiles/test-libsbp.dir/auto_check_sbp_piksi_45.c.o[0m
+[ 71%] [32mBuilding C object test/CMakeFiles/test-libsbp.dir/auto_check_sbp_piksi_46.c.o[0m
+[ 72%] [32mBuilding C object test/CMakeFiles/test-libsbp.dir/auto_check_sbp_settings_25.c.o[0m
+[ 73%] [32mBuilding C object test/CMakeFiles/test-libsbp.dir/auto_check_sbp_settings_26.c.o[0m
+[ 74%] [32mBuilding C object test/CMakeFiles/test-libsbp.dir/auto_check_sbp_settings_30.c.o[0m
+[ 74%] [32mBuilding C object test/CMakeFiles/test-libsbp.dir/auto_check_sbp_settings_27.c.o[0m
+[ 75%] [32mBuilding C object test/CMakeFiles/test-libsbp.dir/auto_check_sbp_settings_31.c.o[0m
+[ 75%] [32mBuilding C object test/CMakeFiles/test-libsbp.dir/auto_check_sbp_settings_32.c.o[0m
+[ 76%] [32mBuilding C object test/CMakeFiles/test-libsbp.dir/auto_check_sbp_settings_33.c.o[0m
+[ 77%] [32mBuilding C object test/CMakeFiles/test-libsbp.dir/auto_check_sbp_settings_34.c.o[0m
+[ 77%] [32mBuilding C object test/CMakeFiles/test-libsbp.dir/auto_check_sbp_settings_35.c.o[0m
+[ 78%] [32mBuilding C object test/CMakeFiles/test-libsbp.dir/auto_check_sbp_system_27.c.o[0m
+[ 79%] [32mBuilding C object test/CMakeFiles/test-libsbp.dir/auto_check_sbp_system_28.c.o[0m
+[ 79%] [32mBuilding C object test/CMakeFiles/test-libsbp.dir/auto_check_sbp_system_29.c.o[0m
+[ 80%] [32mBuilding C object test/CMakeFiles/test-libsbp.dir/auto_check_sbp_system_30.c.o[0m
+[ 81%] [32mBuilding C object test/CMakeFiles/test-libsbp.dir/auto_check_sbp_system_32.c.o[0m
+[ 81%] [32mBuilding C object test/CMakeFiles/test-libsbp.dir/auto_check_sbp_system_33.c.o[0m
+[ 82%] [32mBuilding C object test/CMakeFiles/test-libsbp.dir/auto_check_sbp_system_34.c.o[0m
+[ 83%] [32mBuilding C object test/CMakeFiles/test-libsbp.dir/auto_check_sbp_system_35.c.o[0m
+[ 83%] [32mBuilding C object test/CMakeFiles/test-libsbp.dir/auto_check_sbp_system_36.c.o[0m
+[ 84%] [32mBuilding C object test/CMakeFiles/test-libsbp.dir/auto_check_sbp_system_37.c.o[0m
+[ 85%] [32mBuilding C object test/CMakeFiles/test-libsbp.dir/auto_check_sbp_system_43.c.o[0m
+[ 85%] [32mBuilding C object test/CMakeFiles/test-libsbp.dir/auto_check_sbp_system_39.c.o[0m
+[ 86%] [32mBuilding C object test/CMakeFiles/test-libsbp.dir/auto_check_sbp_system_44.c.o[0m
+[ 86%] [32mBuilding C object test/CMakeFiles/test-libsbp.dir/auto_check_sbp_system_46.c.o[0m
+[ 87%] [32mBuilding C object test/CMakeFiles/test-libsbp.dir/auto_check_sbp_system_38.c.o[0m
+[ 88%] [32mBuilding C object test/CMakeFiles/test-libsbp.dir/auto_check_sbp_system_47.c.o[0m
+[ 88%] [32mBuilding C object test/CMakeFiles/test-libsbp.dir/auto_check_sbp_tracking_40.c.o[0m
+[ 89%] [32mBuilding C object test/CMakeFiles/test-libsbp.dir/auto_check_sbp_tracking_41.c.o[0m
+[ 90%] [32mBuilding C object test/CMakeFiles/test-libsbp.dir/auto_check_sbp_tracking_39.c.o[0m
+[ 91%] [32mBuilding C object test/CMakeFiles/test-libsbp.dir/auto_check_sbp_tracking_42.c.o[0m
+[ 91%] [32mBuilding C object test/CMakeFiles/test-libsbp.dir/auto_check_sbp_tracking_44.c.o[0m
+[ 92%] [32mBuilding C object test/CMakeFiles/test-libsbp.dir/auto_check_sbp_tracking_48.c.o[0m
+[ 93%] [32mBuilding C object test/CMakeFiles/test-libsbp.dir/auto_check_sbp_tracking_46.c.o[0m
+[ 93%] [32mBuilding C object test/CMakeFiles/test-libsbp.dir/auto_check_sbp_tracking_47.c.o[0m
+[ 94%] [32mBuilding C object test/CMakeFiles/test-libsbp.dir/auto_check_sbp_tracking_45.c.o[0m
+[ 95%] [32mBuilding C object test/CMakeFiles/test-libsbp.dir/auto_check_sbp_tracking_49.c.o[0m
+[ 95%] [32mBuilding C object test/CMakeFiles/test-libsbp.dir/auto_check_sbp_tracking_50.c.o[0m
+[ 96%] [32mBuilding C object test/CMakeFiles/test-libsbp.dir/auto_check_sbp_vehicle_50.c.o[0m
+[ 97%] [32mBuilding C object test/CMakeFiles/test-libsbp.dir/auto_check_sbp_vehicle_51.c.o[0m
+[ 98%] [32m[1mLinking C executable test-libsbp[0m
+[ 98%] Built target test-libsbp
+[35m[1mScanning dependencies of target build-post-build-tests[0m
+[ 98%] Built target build-post-build-tests
+[35m[1mScanning dependencies of target post-build-test-libsbp[0m
+[100%] [34m[1mRunning post build test test-libsbp[0m
+Running suite(s): Error Detection and Correction
+ SBP
+ SBP generated test suite: auto_check_sbp_acquisition_1
+ SBP generated test suite: auto_check_sbp_acquisition_2
+ SBP generated test suite: auto_check_sbp_navigation_3
+ SBP generated test suite: auto_check_sbp_navigation_4
+ SBP generated test suite: auto_check_sbp_navigation_5
+ SBP generated test suite: auto_check_sbp_navigation_6
+ SBP generated test suite: auto_check_sbp_navigation_7
+ SBP generated test suite: auto_check_sbp_navigation_8
+ SBP generated test suite: auto_check_sbp_navigation_9
+ SBP generated test suite: auto_check_sbp_navigation_10
+ SBP generated test suite: auto_check_sbp_navigation_11
+ SBP generated test suite: auto_check_sbp_navigation_12
+ SBP generated test suite: auto_check_sbp_navigation_13
+ SBP generated test suite: auto_check_sbp_navigation_14
+ SBP generated test suite: auto_check_sbp_navigation_15
+ SBP generated test suite: auto_check_sbp_navigation_16
+ SBP generated test suite: auto_check_sbp_navigation_17
+ SBP generated test suite: auto_check_sbp_navigation_18
+ SBP generated test suite: auto_check_sbp_navigation_19
+ SBP generated test suite: auto_check_sbp_navigation_20
+ SBP generated test suite: auto_check_sbp_navigation_21
+ SBP generated test suite: auto_check_sbp_navigation_22
+ SBP generated test suite: auto_check_sbp_navigation_23
+ SBP generated test suite: auto_check_sbp_navigation_24
+ SBP generated test suite: auto_check_sbp_observation_25
+ SBP generated test suite: auto_check_sbp_observation_26
+ SBP generated test suite: auto_check_sbp_orientation_27
+ SBP generated test suite: auto_check_sbp_orientation_28
+ SBP generated test suite: auto_check_sbp_orientation_29
+ SBP generated test suite: auto_check_sbp_piksi_30
+ SBP generated test suite: auto_check_sbp_piksi_31
+ SBP generated test suite: auto_check_sbp_piksi_32
+ SBP generated test suite: auto_check_sbp_settings_33
+ SBP generated test suite: auto_check_sbp_settings_34
+ SBP generated test suite: auto_check_sbp_system_35
+ SBP generated test suite: auto_check_sbp_system_36
+ SBP generated test suite: auto_check_sbp_system_37
+ SBP generated test suite: auto_check_sbp_acquisition_38
+ SBP generated test suite: auto_check_sbp_bootload_39
+ SBP generated test suite: auto_check_sbp_ext_events_40
+ SBP generated test suite: auto_check_sbp_logging_41
+ SBP generated test suite: auto_check_sbp_logging_42
+ SBP generated test suite: auto_check_sbp_navigation_43
+ SBP generated test suite: auto_check_sbp_observation_44
+ SBP generated test suite: auto_check_sbp_piksi_45
+ SBP generated test suite: auto_check_sbp_system_46
+ SBP generated test suite: auto_check_sbp_tracking_47
+ SBP generated test suite: auto_check_sbp_tracking_48
+ SBP generated test suite: auto_check_sbp_tracking_49
+ SBP generated test suite: auto_check_sbp_vehicle_50
+100%: Checks: 59, Failures: 0, Errors: 0
+[100%] Built target post-build-test-libsbp
+[35m[1mScanning dependencies of target do-post-build-tests[0m
+[100%] Built target do-post-build-tests
+[ 87%] [34m[1mPerforming install step for 'libsbp'[0m
+[  2%] Built target compat
+[  4%] Built target sbp
+[ 10%] Built target check
+[ 98%] Built target test-libsbp
+[ 98%] Built target build-post-build-tests
+[100%] [34m[1mRunning post build test test-libsbp[0m
+Running suite(s): Error Detection and Correction
+ SBP
+ SBP generated test suite: auto_check_sbp_acquisition_1
+ SBP generated test suite: auto_check_sbp_acquisition_2
+ SBP generated test suite: auto_check_sbp_navigation_3
+ SBP generated test suite: auto_check_sbp_navigation_4
+ SBP generated test suite: auto_check_sbp_navigation_5
+ SBP generated test suite: auto_check_sbp_navigation_6
+ SBP generated test suite: auto_check_sbp_navigation_7
+ SBP generated test suite: auto_check_sbp_navigation_8
+ SBP generated test suite: auto_check_sbp_navigation_9
+ SBP generated test suite: auto_check_sbp_navigation_10
+ SBP generated test suite: auto_check_sbp_navigation_11
+ SBP generated test suite: auto_check_sbp_navigation_12
+ SBP generated test suite: auto_check_sbp_navigation_13
+ SBP generated test suite: auto_check_sbp_navigation_14
+ SBP generated test suite: auto_check_sbp_navigation_15
+ SBP generated test suite: auto_check_sbp_navigation_16
+ SBP generated test suite: auto_check_sbp_navigation_17
+ SBP generated test suite: auto_check_sbp_navigation_18
+ SBP generated test suite: auto_check_sbp_navigation_19
+ SBP generated test suite: auto_check_sbp_navigation_20
+ SBP generated test suite: auto_check_sbp_navigation_21
+ SBP generated test suite: auto_check_sbp_navigation_22
+ SBP generated test suite: auto_check_sbp_navigation_23
+ SBP generated test suite: auto_check_sbp_navigation_24
+ SBP generated test suite: auto_check_sbp_observation_25
+ SBP generated test suite: auto_check_sbp_observation_26
+ SBP generated test suite: auto_check_sbp_orientation_27
+ SBP generated test suite: auto_check_sbp_orientation_28
+ SBP generated test suite: auto_check_sbp_orientation_29
+ SBP generated test suite: auto_check_sbp_piksi_30
+ SBP generated test suite: auto_check_sbp_piksi_31
+ SBP generated test suite: auto_check_sbp_piksi_32
+ SBP generated test suite: auto_check_sbp_settings_33
+ SBP generated test suite: auto_check_sbp_settings_34
+ SBP generated test suite: auto_check_sbp_system_35
+ SBP generated test suite: auto_check_sbp_system_36
+ SBP generated test suite: auto_check_sbp_system_37
+ SBP generated test suite: auto_check_sbp_acquisition_38
+ SBP generated test suite: auto_check_sbp_bootload_39
+ SBP generated test suite: auto_check_sbp_ext_events_40
+ SBP generated test suite: auto_check_sbp_logging_41
+ SBP generated test suite: auto_check_sbp_logging_42
+ SBP generated test suite: auto_check_sbp_navigation_43
+ SBP generated test suite: auto_check_sbp_observation_44
+ SBP generated test suite: auto_check_sbp_piksi_45
+ SBP generated test suite: auto_check_sbp_system_46
+ SBP generated test suite: auto_check_sbp_tracking_47
+ SBP generated test suite: auto_check_sbp_tracking_48
+ SBP generated test suite: auto_check_sbp_tracking_49
+ SBP generated test suite: auto_check_sbp_vehicle_50
+100%: Checks: 59, Failures: 0, Errors: 0
+[100%] Built target post-build-test-libsbp
+[100%] Built target do-post-build-tests
+[36mInstall the project...[0m
+-- Install configuration: ""
+-- Installing: /home/reu-actor/actor_ws/devel/.private/libsbp_catkin/lib/libsbp.so
+-- Installing: /home/reu-actor/actor_ws/devel/.private/libsbp_catkin/include/libsbp
+-- Installing: /home/reu-actor/actor_ws/devel/.private/libsbp_catkin/include/libsbp/flash.h
+-- Installing: /home/reu-actor/actor_ws/devel/.private/libsbp_catkin/include/libsbp/orientation.h
+-- Installing: /home/reu-actor/actor_ws/devel/.private/libsbp_catkin/include/libsbp/file_io.h
+-- Installing: /home/reu-actor/actor_ws/devel/.private/libsbp_catkin/include/libsbp/common.h
+-- Installing: /home/reu-actor/actor_ws/devel/.private/libsbp_catkin/include/libsbp/version.h
+-- Installing: /home/reu-actor/actor_ws/devel/.private/libsbp_catkin/include/libsbp/navigation.h
+-- Installing: /home/reu-actor/actor_ws/devel/.private/libsbp_catkin/include/libsbp/acquisition.h
+-- Installing: /home/reu-actor/actor_ws/devel/.private/libsbp_catkin/include/libsbp/imu.h
+-- Installing: /home/reu-actor/actor_ws/devel/.private/libsbp_catkin/include/libsbp/observation.h
+-- Installing: /home/reu-actor/actor_ws/devel/.private/libsbp_catkin/include/libsbp/vehicle.h
+-- Installing: /home/reu-actor/actor_ws/devel/.private/libsbp_catkin/include/libsbp/ssr.h
+-- Installing: /home/reu-actor/actor_ws/devel/.private/libsbp_catkin/include/libsbp/piksi.h
+-- Installing: /home/reu-actor/actor_ws/devel/.private/libsbp_catkin/include/libsbp/tracking.h
+-- Installing: /home/reu-actor/actor_ws/devel/.private/libsbp_catkin/include/libsbp/logging.h
+-- Installing: /home/reu-actor/actor_ws/devel/.private/libsbp_catkin/include/libsbp/sbas.h
+-- Installing: /home/reu-actor/actor_ws/devel/.private/libsbp_catkin/include/libsbp/cpp
+-- Installing: /home/reu-actor/actor_ws/devel/.private/libsbp_catkin/include/libsbp/cpp/state.h
+-- Installing: /home/reu-actor/actor_ws/devel/.private/libsbp_catkin/include/libsbp/cpp/message_handler.h
+-- Installing: /home/reu-actor/actor_ws/devel/.private/libsbp_catkin/include/libsbp/cpp/frame_handler.h
+-- Installing: /home/reu-actor/actor_ws/devel/.private/libsbp_catkin/include/libsbp/cpp/message_traits.h
+-- Installing: /home/reu-actor/actor_ws/devel/.private/libsbp_catkin/include/libsbp/system.h
+-- Installing: /home/reu-actor/actor_ws/devel/.private/libsbp_catkin/include/libsbp/mag.h
+-- Installing: /home/reu-actor/actor_ws/devel/.private/libsbp_catkin/include/libsbp/linux.h
+-- Installing: /home/reu-actor/actor_ws/devel/.private/libsbp_catkin/include/libsbp/bootload.h
+-- Installing: /home/reu-actor/actor_ws/devel/.private/libsbp_catkin/include/libsbp/ndb.h
+-- Installing: /home/reu-actor/actor_ws/devel/.private/libsbp_catkin/include/libsbp/sbp_handler.hpp
+-- Installing: /home/reu-actor/actor_ws/devel/.private/libsbp_catkin/include/libsbp/user.h
+-- Installing: /home/reu-actor/actor_ws/devel/.private/libsbp_catkin/include/libsbp/gnss.h
+-- Installing: /home/reu-actor/actor_ws/devel/.private/libsbp_catkin/include/libsbp/sbp.h
+-- Installing: /home/reu-actor/actor_ws/devel/.private/libsbp_catkin/include/libsbp/edc.h
+-- Installing: /home/reu-actor/actor_ws/devel/.private/libsbp_catkin/include/libsbp/ext_events.h
+-- Installing: /home/reu-actor/actor_ws/devel/.private/libsbp_catkin/include/libsbp/settings.h
+[100%] [34m[1mCompleted 'libsbp'[0m
+[100%] Built target libsbp

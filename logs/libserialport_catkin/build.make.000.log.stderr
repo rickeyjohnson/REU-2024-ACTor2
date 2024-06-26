@@ -1,0 +1,37 @@
+Cloning into 'libserialport'...
+Note: switching to '6f9b03e'.
+
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+HEAD is now at 6f9b03e HACK: don't even check for termiox
+autoreconf: Entering directory `/home/reu-actor/actor_ws/build/libserialport_catkin/libserialport-prefix/src/libserialport'
+autoreconf: configure.ac: not using Gettext
+autoreconf: running: aclocal --force -I autostuff
+autoreconf: configure.ac: tracing
+autoreconf: running: libtoolize --copy --force
+autoreconf: running: /usr/bin/autoconf --force
+autoreconf: running: /usr/bin/autoheader --force
+autoreconf: running: automake --add-missing --copy --force-missing
+configure.ac:46: installing 'autostuff/ar-lib'
+configure.ac:46: installing 'autostuff/compile'
+configure.ac:67: installing 'autostuff/config.guess'
+configure.ac:67: installing 'autostuff/config.sub'
+configure.ac:44: installing 'autostuff/install-sh'
+configure.ac:44: installing 'autostuff/missing'
+Makefile.am: installing './INSTALL'
+Makefile.am: installing 'autostuff/depcomp'
+parallel-tests: installing 'autostuff/test-driver'
+autoreconf: Leaving directory `/home/reu-actor/actor_ws/build/libserialport_catkin/libserialport-prefix/src/libserialport'

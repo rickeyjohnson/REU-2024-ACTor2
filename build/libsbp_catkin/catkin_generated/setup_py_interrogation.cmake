@@ -1,0 +1,7 @@
+set(libsbp_catkin_SETUP_PY_SETUP_MODULE "distutils.core")
+set(libsbp_catkin_SETUP_PY_VERSION "2.7.4")
+set(libsbp_catkin_SETUP_PY_SCRIPTS "")
+set(libsbp_catkin_SETUP_PY_PACKAGES "")
+set(libsbp_catkin_SETUP_PY_PACKAGE_DIRS "")
+set(libsbp_catkin_SETUP_PY_MODULES "")
+set(libsbp_catkin_SETUP_PY_MODULE_DIRS "")

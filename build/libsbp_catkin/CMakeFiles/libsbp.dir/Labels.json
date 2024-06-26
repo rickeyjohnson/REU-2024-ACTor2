@@ -1,0 +1,43 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/home/reu-actor/actor_ws/build/libsbp_catkin/CMakeFiles/libsbp"
+		},
+		{
+			"file" : "/home/reu-actor/actor_ws/build/libsbp_catkin/CMakeFiles/libsbp.rule"
+		},
+		{
+			"file" : "/home/reu-actor/actor_ws/build/libsbp_catkin/CMakeFiles/libsbp-complete.rule"
+		},
+		{
+			"file" : "/home/reu-actor/actor_ws/build/libsbp_catkin/libsbp-prefix/src/libsbp-stamp/libsbp-install.rule"
+		},
+		{
+			"file" : "/home/reu-actor/actor_ws/build/libsbp_catkin/libsbp-prefix/src/libsbp-stamp/libsbp-mkdir.rule"
+		},
+		{
+			"file" : "/home/reu-actor/actor_ws/build/libsbp_catkin/libsbp-prefix/src/libsbp-stamp/libsbp-download.rule"
+		},
+		{
+			"file" : "/home/reu-actor/actor_ws/build/libsbp_catkin/libsbp-prefix/src/libsbp-stamp/libsbp-update.rule"
+		},
+		{
+			"file" : "/home/reu-actor/actor_ws/build/libsbp_catkin/libsbp-prefix/src/libsbp-stamp/libsbp-patch.rule"
+		},
+		{
+			"file" : "/home/reu-actor/actor_ws/build/libsbp_catkin/libsbp-prefix/src/libsbp-stamp/libsbp-configure.rule"
+		},
+		{
+			"file" : "/home/reu-actor/actor_ws/build/libsbp_catkin/libsbp-prefix/src/libsbp-stamp/libsbp-build.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"libsbp"
+		],
+		"name" : "libsbp"
+	}
+}

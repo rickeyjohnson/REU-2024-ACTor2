@@ -1,0 +1,8 @@
+prefix=/home/reu-actor/actor_ws/install
+
+Name: libserialport_catkin
+Description: Description of libserialport_catkin
+Version: 2.7.4
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib 
+Requires: 

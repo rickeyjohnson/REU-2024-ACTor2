@@ -1,0 +1,1 @@
+/home/reu-actor/actor_ws/devel/.private/libserialport_catkin/lib/pkgconfig/libserialport_catkin.pc

@@ -13,7 +13,7 @@ from sklearn.cluster import DBSCAN
 # dbw commands
 import math
 from dataspeed_ulc_msgs.msg import UlcCmd # Drive by wire UL 
-from dvw_polaris_msgs.msg import SteeringCmd # drive by wire native messages
+from dbw_polaris_msgs.msg import SteeringCmd # drive by wire native messages
 
 
 # global variables
@@ -64,6 +64,16 @@ def compute_lines(rows, cols, image, crop1, crop2):
     if lines is not None:
         for line in lines:
 
+            # x1, y1, x2, y2 = line[0]
+            # dx = x2 - x1
+            # dy = y2 - y1
+            # if dx == 0: 
+            #     slope = float('inf')
+            # else:
+            #     slope = dy / dx
+
+            # if abs(slope) >= 0.4:
+            #     cv.line(line_image, (x1, y1), (x2, y2), (255, 255, 255), 2)
             x1, y1, x2, y2 = line[0]
             
             # Calculate length of the line segment
@@ -98,7 +108,7 @@ def compute_lines(rows, cols, image, crop1, crop2):
     
     if len(points) == 0:
         print("No white pixels detected.")
-        return image
+        return None, 0
 
     # downsample the points uniformly for clustering
     # downsample_factor = 10
@@ -119,7 +129,7 @@ def compute_lines(rows, cols, image, crop1, crop2):
 
     if len(unique_labels) < 2:
         print("a")
-        return None
+        return None, 0
     
     lane_centroids = []
     # for each cluster fit a 2nd degree polynomial 
@@ -168,7 +178,7 @@ def image_callback(ros_image):
 
     # remove top of image
     rows1, cols1, _ = cv_image.shape
-    cv_image = cv_image[rows1 // 2:,cols1//6:]
+    cv_image = cv_image[rows1 // 2:,:]
     rows, cols, _ = cv_image.shape
 
     mymask = np.zeros((rows, cols), dtype="uint8")
@@ -187,9 +197,13 @@ def image_callback(ros_image):
         crop1 = gap
         crop2 = 0
 
-    angle = np.arctan(abs(gap)/(rows//2))
-    target_speed = 2.0 #mph
+    angle = float(math.degrees(abs(gap)/(rows//2)) / 2)
+    print(angle)
+    target_speed = speed #mph
+    
+
     if cx:
+        cx+=0
         mid = cols / 2
         if drive:
             publish_ulc_speed(target_speed)
@@ -197,13 +211,13 @@ def image_callback(ros_image):
         else:
             publish_ulc_speed(0)
 
-        angular_threshold = 10
+        angular_threshold = 20
         if mid < cx - angular_threshold:
-            publish_ulc_speed(-angle)
+            publish_steering(-angle)
         elif mid > cx + angular_threshold:
-            publish_ulc_speed(angle)
+            publish_steering(angle)
         else:
-            publish_ulc_speed(0)
+            publish_steering(0)
         enable_dbw()
     
 def publish_ulc_speed(speed: float) -> None:
@@ -223,7 +237,7 @@ def publish_ulc_speed(speed: float) -> None:
 
     ulc_cmd.pedals_mode = 0  # Speed mode
     # ---------------------------------------------------------------------
-
+    print("bye")
     pub_ulc.publish(ulc_cmd)
 
 
@@ -233,7 +247,7 @@ def publish_steering(requested_road_angle: float = None) -> None:
 
     if requested_road_angle is None:
         rospy.logerr("publish_steering called with no steering angle provided")
-        return
+        requested_road_angle = 0
 
     if requested_road_angle is not None:
         if requested_road_angle < 0:
@@ -258,7 +272,6 @@ def publish_steering(requested_road_angle: float = None) -> None:
     msg_steering.quiet = False
     msg_steering.count = 0
     # ---------------------------------------------------------------------
-
     pub_steering.publish(msg_steering)
 
 
@@ -271,12 +284,12 @@ def enable_dbw() -> None:
 
 # main method
 if __name__ == '__main__':
-  rospy.init_node('advanced_follow_lane2', anonymous=True) # initialize node
+  rospy.init_node('advanced__dbw_follow_lane', anonymous=True) # initialize node
   imgtopic = rospy.get_param("~imgtopic_name") # private name
   rospy.Subscriber(imgtopic, Image, image_callback) # subscribe to image (so that image_callback can be called every time an image is published)
-  pub_ulc = rospy.Publisher(rospy.get_param("ulc"), UlcCmd, queue_size=1)
-  pub_steering = rospy.Publisher(rospy.get_param("steering"), SteeringCmd, queue_size = 1)
-  pub_enable_cmd = rospy.Publisher(rospy.get_param("enable"), Empty, queue_size=1)
+  pub_ulc = rospy.Publisher("/vehicle/ulc_cmd", UlcCmd, queue_size=1)
+  pub_steering = rospy.Publisher("/vehicle/steering_cmd", SteeringCmd, queue_size=1)
+  pub_enable_cmd = rospy.Publisher("/vehicle/enable", Empty, queue_size=1)
   srv = Server(FollowLineConfig, dyn_rcfg_cb) # create dynamic reconfigure server that calls dyn_rcfg_cb function every time a parameter is changed
 
   try:

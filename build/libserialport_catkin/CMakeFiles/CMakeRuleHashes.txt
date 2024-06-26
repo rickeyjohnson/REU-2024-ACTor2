@@ -1,0 +1,11 @@
+# Hashes of file build rules.
+fb26c72c84548f0ae1de68fb43976db5 CMakeFiles/clean_test_results
+e8896fe3d21a2eb133b30348453774ff CMakeFiles/libserialport
+6669ee7d41afaf4fa50ff6dbc9900e37 CMakeFiles/libserialport-complete
+406def39fb6bf6cba79822f1996bb7a8 libserialport-prefix/src/libserialport-stamp/libserialport-build
+d1126882daf9405a4b53458c092b321c libserialport-prefix/src/libserialport-stamp/libserialport-configure
+b287aea3e933b72f1c7797d6c91ba3ae libserialport-prefix/src/libserialport-stamp/libserialport-download
+7c272e0b7ad44ff253ebbda7d9e6268e libserialport-prefix/src/libserialport-stamp/libserialport-install
+ef5b270d83010369fd8b85a20d743045 libserialport-prefix/src/libserialport-stamp/libserialport-mkdir
+02569040c0ef0ac009a145a92afa5545 libserialport-prefix/src/libserialport-stamp/libserialport-patch
+cafd1d2cc2ec9f5caf1eda1b2b6aac5e libserialport-prefix/src/libserialport-stamp/libserialport-update

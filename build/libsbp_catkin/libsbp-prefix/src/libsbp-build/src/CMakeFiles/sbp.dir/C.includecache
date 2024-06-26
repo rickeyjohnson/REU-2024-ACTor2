@@ -1,0 +1,34 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/reu-actor/actor_ws/build/libsbp_catkin/libsbp-prefix/src/libsbp/c/include/libsbp/common.h
+stdint.h
+-
+stdbool.h
+-
+inttypes.h
+-
+
+/home/reu-actor/actor_ws/build/libsbp_catkin/libsbp-prefix/src/libsbp/c/include/libsbp/edc.h
+common.h
+/home/reu-actor/actor_ws/build/libsbp_catkin/libsbp-prefix/src/libsbp/c/include/libsbp/common.h
+
+/home/reu-actor/actor_ws/build/libsbp_catkin/libsbp-prefix/src/libsbp/c/include/libsbp/sbp.h
+common.h
+/home/reu-actor/actor_ws/build/libsbp_catkin/libsbp-prefix/src/libsbp/c/include/libsbp/common.h
+
+/home/reu-actor/actor_ws/build/libsbp_catkin/libsbp-prefix/src/libsbp/c/src/edc.c
+libsbp/edc.h
+/home/reu-actor/actor_ws/build/libsbp_catkin/libsbp-prefix/src/libsbp/c/src/libsbp/edc.h
+
+/home/reu-actor/actor_ws/build/libsbp_catkin/libsbp-prefix/src/libsbp/c/src/sbp.c
+libsbp/edc.h
+/home/reu-actor/actor_ws/build/libsbp_catkin/libsbp-prefix/src/libsbp/c/src/libsbp/edc.h
+libsbp/sbp.h
+/home/reu-actor/actor_ws/build/libsbp_catkin/libsbp-prefix/src/libsbp/c/src/libsbp/sbp.h
+

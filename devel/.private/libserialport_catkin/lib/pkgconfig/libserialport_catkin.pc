@@ -1,0 +1,8 @@
+prefix=/home/reu-actor/actor_ws/devel/.private/libserialport_catkin
+
+Name: libserialport_catkin
+Description: Description of libserialport_catkin
+Version: 2.7.4
+Cflags: -I/home/reu-actor/actor_ws/devel/.private/libserialport_catkin/include
+Libs: -L${prefix}/lib 
+Requires: 
