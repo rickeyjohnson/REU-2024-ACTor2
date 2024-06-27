@@ -9,6 +9,7 @@ from geometry_msgs.msg import Twist
 import cv2 as cv
 import numpy as np
 from sklearn.cluster import DBSCAN
+import time
 
 # dbw commands
 import math
@@ -25,6 +26,10 @@ velocity_pub = None
 empty_msg = Empty()
 crop1 = 0
 crop2 = 0
+
+start_time = None
+start_time2 = None
+
 
 
 # dynamic reconfigure
@@ -92,7 +97,7 @@ def compute_lines(rows, cols, image, crop1, crop2):
                 slope = (y2 - y1) / (x2 - x1)
             
             # Extend the line if its length is shorter than 40 pixels and slope is >= 0.4 or <= -0.4
-            if length < 50 and abs(slope) >= 0.4:
+            if length < 50 and abs(slope) >= 0.5:
                 # Extend the line by a factor of 1.5 times its original length
                 extend_factor = 2
                 x1_extended = int(x1 - (x2 - x1) * (extend_factor - 1))
@@ -123,7 +128,7 @@ def compute_lines(rows, cols, image, crop1, crop2):
     points = points[::downsample_factor]
 
     # perform density based clustering
-    dbscan = DBSCAN(eps=140, min_samples=3)
+    dbscan = DBSCAN(eps=100, min_samples=3)
     clusters = dbscan.fit_predict(points)
 
     # get the two largest clusters 
@@ -175,13 +180,13 @@ def compute_lines(rows, cols, image, crop1, crop2):
 
 
 def image_callback(ros_image):
-    global bridge, vel_msg, speed, drive, velocity_pub, crop1,crop2
+    global bridge, vel_msg, speed, drive, velocity_pub, crop1,crop2, start_time, start_time2
     try:
         cv_image = bridge.imgmsg_to_cv2(ros_image, "bgr8")
     except CvBridgeError as e:
         rospy.logerr(f"CvBridge Error: {e}")
         return
-
+    image2 = cv_image.copy()
     # remove top of image
     rows1, cols1, _ = cv_image.shape
     cv_image = cv_image[rows1 // 2:,:]
@@ -194,8 +199,8 @@ def image_callback(ros_image):
 
     image = cv_image.copy()
 
-    image2 = cv_image.copy()
-    image2 = image2[int(rows1*3.5/5):, int(cols1 * 1 / 3): int(cols1 * 2/3)]
+    
+    image2 = image2[int(rows1*3/5):int(rows1*4/5), int(cols1 * 1 / 3): int(cols1 * 2/3)]
     rows2, cols2, _ = image2.shape
     # yellow mask
     hsv = cv.cvtColor(image2,cv.COLOR_BGR2HSV)
@@ -221,16 +226,35 @@ def image_callback(ros_image):
         crop2 = 0
 
     angle = float(math.degrees(abs(gap)/(rows//2)) / 2)
-    print(angle)
     target_speed = speed #mph
     
 
     if cx:
-        cx+=0
         mid = cols / 2
         if drive:
-            if yellow_pct > 0.5:
-                publish_ulc_speed(0)
+            if start_time2 is not None:
+                current_time = time.time()
+                if (current_time - start_time2) < 20:
+                    publish_ulc_speed(speed)
+                else:
+                    start_time2 = None
+            elif yellow_pct > 2 and start_time == None:
+                start_time = time.time()
+            elif start_time is not None:
+                current_time = time.time()
+                if (current_time - start_time) < 5:
+                    publish_ulc_speed(0)
+                else:
+                    start_time = None
+                    start_time2 = time.time()
+
+                # time.sleep(10)
+                # start_time = time.time()
+                # while True:
+                #     publish_ulc_speed(target_speed)
+                #     currrent_time = time.time()
+                #     if (current_time - start_time) > 4:
+                #         break
             else:
                 publish_ulc_speed(target_speed)
         else:
@@ -243,6 +267,7 @@ def image_callback(ros_image):
             publish_steering(angle)
         else:
             publish_steering(0)
+    enable_dbw()
     
 def publish_ulc_speed(speed: float) -> None:
     """Publish requested speed to the vehicle using ULC message."""
@@ -261,7 +286,6 @@ def publish_ulc_speed(speed: float) -> None:
 
     ulc_cmd.pedals_mode = 0  # Speed mode
     # ---------------------------------------------------------------------
-    print("bye")
     pub_ulc.publish(ulc_cmd)
 
 
@@ -315,7 +339,6 @@ if __name__ == '__main__':
   pub_steering = rospy.Publisher("/vehicle/steering_cmd", SteeringCmd, queue_size=1)
   pub_enable_cmd = rospy.Publisher("/vehicle/enable", Empty, queue_size=1)
   srv = Server(FollowLineConfig, dyn_rcfg_cb) # create dynamic reconfigure server that calls dyn_rcfg_cb function every time a parameter is changed
-  enable_dbw()
   try:
     rospy.spin()
   except rospy.ROSInterruptException:
