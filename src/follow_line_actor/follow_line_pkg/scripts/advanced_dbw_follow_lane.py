@@ -29,10 +29,16 @@ crop2 = 0
 
 # dynamic reconfigure
 def dyn_rcfg_cb(config, level):
-  global thresh, speed, drive
+  global thresh, speed, drive, ly, uy, ls, lv, us, uv
   thresh = config.thresh
   speed = config.speed
   drive = config.enable_drive
+  ly = config.lower_yellow
+  uy = config.upper_yellow
+  ls = config.ls
+  lv = config.lv
+  us = config.us
+  uv = config.uv
   return config # must return config
 
 # compute lines and follow lane
@@ -188,6 +194,23 @@ def image_callback(ros_image):
 
     image = cv_image.copy()
 
+    image2 = cv_image.copy()
+    image2 = image2[int(rows1*3.5/5):, int(cols1 * 1 / 3): int(cols1 * 2/3)]
+    rows2, cols2, _ = image2.shape
+    # yellow mask
+    hsv = cv.cvtColor(image2,cv.COLOR_BGR2HSV)
+    lower_yellow = np.array([ly, ls, lv]) 
+    upper_yellow = np.array([uy, us, uv])
+    yellow_mask = cv.inRange(hsv, lower_yellow, upper_yellow)
+
+    # check for intersection
+    num_yellow_pix = cv.countNonZero(yellow_mask)
+    yellow_pct = (100 * num_yellow_pix) / (rows2 * cols2)
+    print(yellow_pct)
+        # show image
+    cv.imshow("yellow", yellow_mask)
+    cv.waitKey(3)    
+
     # compute lines and obtain cx
     cx, gap = compute_lines(rows, cols, image, crop1, crop2)
     if gap < 0:
@@ -206,8 +229,10 @@ def image_callback(ros_image):
         cx+=0
         mid = cols / 2
         if drive:
-            publish_ulc_speed(target_speed)
-            
+            if yellow_pct > 0.5:
+                publish_ulc_speed(0)
+            else:
+                publish_ulc_speed(target_speed)
         else:
             publish_ulc_speed(0)
 
@@ -218,7 +243,6 @@ def image_callback(ros_image):
             publish_steering(angle)
         else:
             publish_steering(0)
-        enable_dbw()
     
 def publish_ulc_speed(speed: float) -> None:
     """Publish requested speed to the vehicle using ULC message."""
@@ -291,7 +315,7 @@ if __name__ == '__main__':
   pub_steering = rospy.Publisher("/vehicle/steering_cmd", SteeringCmd, queue_size=1)
   pub_enable_cmd = rospy.Publisher("/vehicle/enable", Empty, queue_size=1)
   srv = Server(FollowLineConfig, dyn_rcfg_cb) # create dynamic reconfigure server that calls dyn_rcfg_cb function every time a parameter is changed
-
+  enable_dbw()
   try:
     rospy.spin()
   except rospy.ROSInterruptException:
